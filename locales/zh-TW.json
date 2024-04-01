@@ -7,17 +7,17 @@
       "login_form_password_placeholder": "您的密碼",
       "login_form_error": "密碼錯誤！",
       "login_form_submit": "輸入",
-      "admin_link_html": "您是商店擁有人嗎？<a href=\"/admin\" class=\"link underlined-link\">請在此登入</a>",
+      "admin_link_html": "您是商店擁有人嗎？<a href=\"\/admin\" class=\"link underlined-link\">請在此登入<\/a>",
       "powered_by_shopify_html": "本商店由 {{ shopify }} 提供技術支援"
     },
     "social": {
       "alt_text": {
         "share_on_facebook": "分享至 Facebook",
-        "share_on_twitter": "分享至 X",
+        "share_on_twitter": "在 Twitter 上發佈 Twitter 貼文",
         "share_on_pinterest": "在 Pinterest 上發佈 Pin 貼文"
       },
       "links": {
-        "twitter": "X (Twitter)",
+        "twitter": "Twitter",
         "facebook": "Facebook",
         "pinterest": "Pinterest",
         "instagram": "Instagram",
@@ -51,7 +51,7 @@
       "close": "關閉分享"
     },
     "slider": {
-      "of": "/",
+      "of": "\/",
       "next_slide": "投影片右側",
       "previous_slide": "投影片左側",
       "name": "投影播放器"
@@ -118,10 +118,8 @@
         "minimum_of": "最少 {{ quantity }} 個",
         "maximum_of": "最多 {{ quantity }} 個",
         "multiples_of": "{{ quantity }} 的倍數",
-        "in_cart_html": "購物車中有 <span class=\"quantity-cart\">{{ quantity }}</span> 個",
-        "note": "檢視數量規則",
-        "min_of": "最少 {{ quantity }} 個",
-        "max_of": "最多 {{ quantity }} 個"
+        "in_cart_html": "購物車中有 <span class=\"quantity-cart\">{{ quantity }}<\/span> 個",
+        "note": "檢視數量規則"
       },
       "price": {
         "from_price_html": "從 {{ price }} 起",
@@ -140,8 +138,8 @@
         "view_store_info": "檢視商店資訊",
         "check_other_stores": "查看其他商店的供貨情況",
         "pick_up_available": "可提供取貨服務",
-        "pick_up_available_at_html": "可提供 <span class=\"color-foreground\">{{ location_name }}</span> 的取貨服務",
-        "pick_up_unavailable_at_html": "目前無法提供 <span class=\"color-foreground\">{{ location_name }}</span> 的取貨服務",
+        "pick_up_available_at_html": "可提供 <span class=\"color-foreground\">{{ location_name }}<\/span> 的取貨服務",
+        "pick_up_unavailable_at_html": "目前無法提供 <span class=\"color-foreground\">{{ location_name }}<\/span> 的取貨服務",
         "unavailable": "無法載入取貨服務供應情況",
         "refresh": "重新整理"
       },
@@ -157,7 +155,7 @@
       },
       "view_full_details": "查看完整資訊",
       "include_taxes": "內含稅金。",
-      "shipping_policy_html": "結帳時計算<a href=\"{{ link }}\">運費</a>。",
+      "shipping_policy_html": "結帳時計算<a href=\"{{ link }}\">運費<\/a>。",
       "choose_options": "選擇選項",
       "choose_product_options": "選擇 {{ product_name }} 的選項",
       "value_unavailable": "{{ option_value }} (無法供貨)",
@@ -173,7 +171,7 @@
         "title": "批發價",
         "note": "提供批發價",
         "minimum": "{{ quantity }}+",
-        "price_at_each": "{{ price }}/每項",
+        "price_at_each": "{{ price }}\/每項",
         "price_range": "{{ minimum }} - {{ maximum }}"
       }
     },
@@ -280,9 +278,9 @@
       "empty": "您的購物車是空的",
       "cart_error": "更新購物車時發生錯誤。請再試一次。",
       "cart_quantity_error_html": "您只能將 {{ quantity }} 項商品加入您的購物車。",
-      "taxes_and_shipping_policy_at_checkout_html": "結帳時計算稅金、折扣和<a href=\"{{ link }}\">運費</a>",
+      "taxes_and_shipping_policy_at_checkout_html": "結帳時計算稅金、折扣和<a href=\"{{ link }}\">運費<\/a>",
       "taxes_included_but_shipping_at_checkout": "內含稅金，結帳時計算運費和折扣",
-      "taxes_included_and_shipping_policy_html": "內含稅金。結帳時計算<a href=\"{{ link }}\">運費</a>和折扣。",
+      "taxes_included_and_shipping_policy_html": "內含稅金。結帳時計算<a href=\"{{ link }}\">運費<\/a>和折扣。",
       "taxes_and_shipping_at_checkout": "結帳時計算稅金、折扣和運費",
       "headings": {
         "product": "產品",
@@ -294,7 +292,7 @@
       "update": "更新",
       "login": {
         "title": "是否有帳號？",
-        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">登入</a>以加速結帳。"
+        "paragraph_html": "<a href=\"{{ link }}\" class=\"link underlined-link\">登入<\/a>以加速結帳。"
       },
       "estimated_total": "估計總金額",
       "new_estimated_total": "新的估計總金額"
@@ -317,7 +315,7 @@
     "collection_template": {
       "title": "商品系列",
       "empty": "找不到任何產品",
-      "use_fewer_filters_html": "使用較少篩選條件或<a class=\"{{ class }}\" href=\"{{ link }}\">全部移除</a>"
+      "use_fewer_filters_html": "使用較少篩選條件或<a class=\"{{ class }}\" href=\"{{ link }}\">全部移除<\/a>"
     },
     "video": {
       "load_video": "載入影片：{{ description }}"
@@ -344,7 +342,7 @@
     "quick_order_list": {
       "product_total": "商品小計",
       "view_cart": "檢視購物車",
-      "each": "{{ money }}/每項",
+      "each": "{{ money }}\/每項",
       "product": "商品",
       "variant": "子類",
       "variant_total": "子類總計",
@@ -361,20 +359,144 @@
       "remove_all_items_confirmation": "是否要從購物車移除全部 {{ quantity }} 個品項？",
       "remove_all": "全部移除",
       "cancel": "取消",
-      "remove_all_single_item_confirmation": "是否要從您的購物車移除 1 個品項？",
-      "min_error": "此品項下限為 {{ min }}",
-      "max_error": "此品項上限為 {{ max }}",
-      "step_error": "只能以 {{ step }} 為增量新增此品項"
+      "remove_all_single_item_confirmation": "是否要從您的購物車移除 1 個品項？"
+    },
+    "ecom-test-home": {
+      "product_option_swatch_ycxw79hm12_html": "Color",
+      "view_more_text_ycxw79hm12_html": "View more",
+      "add_to_cart_ycxw79hm12_html": "Add to cart",
+      "product_unavailable_ycxw79hm12_html": "Unavailable",
+      "product_soldout_ycxw79hm12_html": "Sold out",
+      "added_cart_text_ycxw79hm12_html": "Added to cart",
+      "added_cart_message_ycxw79hm12_html": "Added to cart",
+      "pre_order_ycxw79hm12_html": "Pre order",
+      "sold_out_text_ycxw79hm12_html": "Sold out",
+      "quick_shop_text_ycxw79hm12_html": "Quick Shop",
+      "sold_text_ycxw79hm12_html": "Sold",
+      "sale_text_ycxw79hm12_html": "Sale",
+      "product_type_ycxw79hm12_html": "Type",
+      "no_product_item_ycxw79hm12_html": "There are no product yet!",
+      "examplegmailcom_c46s41fkbv_html": "example@gmail.com",
+      "submit_title_c46s41fkbv_html": "Subscribe",
+      "success_message_c46s41fkbv_html": "Subscribed successfully!",
+      "error_title_c46s41fkbv_html": "Oops! An error has occured",
+      "error_already_c46s41fkbv_html": "Email have already subscribed!",
+      "Enteryouremailaddress_0ypewf08w6nm_html": "Enter your email address",
+      "submit_title_0ypewf08w6nm_html": " ",
+      "xv055fd34912244075252551514269233321231253_0ypewf08w6nm_html": "<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewBox=\"0 0 512 512\" fill=\"currentColor\"><path d=\"M511.6 36.86l-64 415.1c-1.5 9.734-7.375 18.22-15.97 23.05c-4.844 2.719-10.27 4.097-15.68 4.097c-4.188 0-8.319-.8154-12.29-2.472l-122.6-51.1l-50.86 76.29C226.3 508.5 219.8 512 212.8 512C201.3 512 192 502.7 192 491.2v-96.18c0-7.115 2.372-14.03 6.742-19.64L416 96l-293.7 264.3L19.69 317.5C8.438 312.8 .8125 302.2 .0625 289.1s5.469-23.72 16.06-29.77l448-255.1c10.69-6.109 23.88-5.547 34 1.406S513.5 24.72 511.6 36.86z\"><\/path><\/svg>",
+      "success_message_0ypewf08w6nm_html": "Subscribed successfully!",
+      "error_title_0ypewf08w6nm_html": "Opps!. An error has occurred",
+      "error_already_0ypewf08w6nm_html": "Email have already subscribed!",
+      "product_option_swatch_cyan4xiuumu_html": "Color",
+      "view_more_text_cyan4xiuumu_html": "View more",
+      "add_to_cart_cyan4xiuumu_html": "Add to cart",
+      "product_unavailable_cyan4xiuumu_html": "Unavailable",
+      "product_soldout_cyan4xiuumu_html": "Sold out",
+      "added_cart_text_cyan4xiuumu_html": "Added to cart",
+      "added_cart_message_cyan4xiuumu_html": "Added to cart",
+      "pre_order_cyan4xiuumu_html": "Pre order",
+      "sold_out_text_cyan4xiuumu_html": "Sold out",
+      "quick_shop_text_cyan4xiuumu_html": "Quick Shop",
+      "sold_text_cyan4xiuumu_html": "Sold",
+      "sale_text_cyan4xiuumu_html": "Sale",
+      "product_type_cyan4xiuumu_html": "Type",
+      "no_product_item_cyan4xiuumu_html": "There are no product yet!",
+      "headingtext_8odbt35fq0q_html": "Modern Living&nbsp;<div>Room Accessories<div><div><div><div><div><\/div><\/div><\/div><\/div><\/div><\/div>",
+      "textcontent_f3gvi1sho2a_html": "Real concern for all of us so, next time you feel like ",
+      "textcontent_ju3bs4549fe_html": "Ceramic Plates<br>",
+      "textcontent_gt6tjbejkk_html": "$85.00<br>",
+      "buttoncontent_9iso0pnaljv_html": "Explore More",
+      "headingtext_thmq71zh8q_html": "Modern Dining<div> Furniture.<\/div>",
+      "textcontent_82gb3i32s5u_html": "Real concern for all of us so, next time you feel like ",
+      "textcontent_fqqcpp5gy5m_html": "Ceramic Plates<br>",
+      "textcontent_s0xavzdiap_html": "$75.00<br>",
+      "buttoncontent_vpm8sj2q4k_html": "Explore More",
+      "headingtext_6xp7eua5e5n_html": "Luxurious <div>Living room<div><div><div><div><div><\/div><\/div><\/div><\/div><\/div><\/div>",
+      "textcontent_o912mo92vd_html": "Special Offers You Can't Miss ",
+      "textcontent_wat7lwu9fws_html": "Ceramic Plates<br>",
+      "textcontent_jegvpzrdbg_html": "$55.00<br>",
+      "buttoncontent_dlpamelii6v_html": "Explore More",
+      "headingtext_dmew6ib413n_html": "Shop Categories<br>",
+      "masonryheading0_ccntw0d9tim_html": "Pastel Live Colors",
+      "masonrycontent0_ccntw0d9tim_html": "Hand crafted goodies with the best materials.",
+      "masonry_button_title_0_ccntw0d9tim_html": "Shop now",
+      "masonryheading1_ccntw0d9tim_html": "CREATIVE MODERN<br>",
+      "masonrycontent1_ccntw0d9tim_html": "Eliminating single-use plastic.",
+      "masonry_button_title_1_ccntw0d9tim_html": "Shop now",
+      "masonryheading2_ccntw0d9tim_html": "Swedish Libraries<br>",
+      "masonrycontent2_ccntw0d9tim_html": "Eliminating single-use plastic.",
+      "masonry_button_title_2_ccntw0d9tim_html": "Shop Now",
+      "title0_4oobkx6wk8u_html": "Free & Fast Shipping",
+      "text0_4oobkx6wk8u_html": "Receive free shipping all over \rthe world.",
+      "title1_4oobkx6wk8u_html": "Secure Payment Gateways",
+      "text1_4oobkx6wk8u_html": "We use highly secured gateways\rstore details.",
+      "title2_4oobkx6wk8u_html": "Return & Refund Policy",
+      "text2_4oobkx6wk8u_html": "Simply return within 30 days\rexchange.",
+      "headingtext_1ujg0x27uql_html": "Browse Our Items<br>",
+      "tabtitle0_ajjs3czudn4_html": "New Arrivals",
+      "tabtitle1_ajjs3czudn4_html": "Best Sellers",
+      "text_week_cyan4xiuumu_html": "[%-W] week%!W",
+      "text_day_cyan4xiuumu_html": "[%-d] day%!D",
+      "text_hour_cyan4xiuumu_html": "[%-H] hr%!H",
+      "text_minute_cyan4xiuumu_html": "[%-M] min%!M",
+      "text_second_cyan4xiuumu_html": "[%-S] sec%!S",
+      "Sale_cyan4xiuumu_html": "Sale",
+      "text_week_ycxw79hm12_html": "[%-W] week%!W",
+      "text_day_ycxw79hm12_html": "[%-d] day%!D",
+      "text_hour_ycxw79hm12_html": "[%-H] hr%!H",
+      "text_minute_ycxw79hm12_html": "[%-M] min%!M",
+      "text_second_ycxw79hm12_html": "[%-S] sec%!S",
+      "Sale_ycxw79hm12_html": "Sale",
+      "text_week_w2b92hd9sg_html": "[%-W] week%!W",
+      "text_day_w2b92hd9sg_html": "[%-d] day%!d",
+      "text_hour_w2b92hd9sg_html": "[%-H] hr%!H",
+      "text_minute_w2b92hd9sg_html": "[%-M] min%!M",
+      "text_second_w2b92hd9sg_html": "[%-S] sec%!S",
+      "headingtext_pnu9eqi46ee_html": "<div>Everyone Always Loves&nbsp;<\/div><div>Our Unique Design.<\/div>",
+      "textcontent_sj5dbyppej_html": "Best deals night you’re tree like earth.",
+      "buttoncontent_q74m5hs92jn_html": "Starting from $9.99",
+      "headingtext_r4kh35kodl_html": "On Going Offers &amp; Deals<br>",
+      "textcontent_3zmi3ee85wp_html": "Best deals night you’re tree like earth.",
+      "view_more_link0_8qzyosxky3u_html": "View Details",
+      "view_more_link1_8qzyosxky3u_html": "View Details",
+      "view_more_link0_c1vziqxjgv_html": "View Details",
+      "view_more_link1_c1vziqxjgv_html": "View Details",
+      "view_more_link0_zrwcviir4h_html": "View Details",
+      "view_more_link1_zrwcviir4h_html": "View Details",
+      "view_more_link0_ngslgx7zzw_html": "View Details",
+      "view_more_link1_ngslgx7zzw_html": "View Details",
+      "view_more_link0_xxxhnv6gtr_html": "View Details",
+      "view_more_link1_xxxhnv6gtr_html": "View Details",
+      "view_more_link0_l136lxltbxf_html": "View Details",
+      "view_more_link1_l136lxltbxf_html": "View Details",
+      "view_more_link0_7i2lmw8cw2k_html": "View Details",
+      "view_more_link1_7i2lmw8cw2k_html": "View Details",
+      "view_more_link0_afnfvsytm9c_html": "View Details",
+      "view_more_link1_afnfvsytm9c_html": "View Details",
+      "headingtext_5txcaav2314_html": "Join Our Newsletter For $25 Off<br>",
+      "textcontent_vuvxckfk1oq_html": "We'll email you voucher your first order over £50.",
+      "masonryheading0_mt5gkyldab_html": "<div>Year End Sale<\/div><div>70% Off.<\/div>",
+      "masonry_button_title_0_mt5gkyldab_html": "Grab offer now",
+      "masonryheading1_mt5gkyldab_html": "<div>Dinning Tables&nbsp;<\/div><div>At Low Cost<\/div>",
+      "masonry_button_title_1_mt5gkyldab_html": "View Products",
+      "textcontent_x8oaxbb6zh8_html": "The declared value of the goods are valid as of \nthe current date quis ipsum suspendisse ultrices \ngravida commodo viverra.<div><\/div>",
+      "headingtext_oowuxpyrhfq_html": "Product",
+      "headingtext_rvgfv0luqe_html": "Service",
+      "headingtext_vnpboqn8gs_html": "Company",
+      "headingtext_gdiic8dv105_html": "Downloads",
+      "headingtext_p59xf4vh45h_html": "Support",
+      "textcontent_jrq28pracic_html": "Subscribe for latest updates &amp; offers.",
+      "textcontent_xyzzok7iayh_html": "Copyright © 2023 EComposer Templates | All Rights Reserved"
     }
   },
   "localization": {
-    "country_label": "國家/地區",
+    "country_label": "國家\/地區",
     "language_label": "語言",
     "update_language": "更新語言",
-    "update_country": "更新國家/地區",
+    "update_country": "更新國家\/地區",
     "search": "搜尋",
-    "popular_countries_regions": "常見國家/地區",
-    "country_results_count": "找到 {{ count }} 個國家/地區"
+    "popular_countries_regions": "常見國家\/地區",
+    "country_results_count": "找到 {{ count }} 個國家\/地區"
   },
   "customer": {
     "account": {
@@ -403,9 +525,9 @@
       "address1": "地址 1",
       "address2": "地址 2",
       "city": "市",
-      "country": "國家/地區",
+      "country": "國家\/地區",
       "province": "省",
-      "zip": "郵政/郵遞區號",
+      "zip": "郵政\/郵遞區號",
       "phone": "電話",
       "set_default": "設為預設地址",
       "add": "新增地址",
@@ -516,6 +638,51 @@
       "send_on_label": "發送時間 (選填)",
       "expanded": "禮品卡收件人表單已展開",
       "collapsed": "禮品卡收件人表單已收合"
+    }
+  },
+  "pagefly": {
+    "products": {
+      "product": {
+        "regular_price": "Regular price",
+        "sold_out": "Sold out",
+        "unavailable": "Unavailable",
+        "on_sale": "Sale",
+        "quantity": "Quantity",
+        "add_to_cart": "Add to cart",
+        "back_to_collection": "Back to {{ title }}",
+        "view_details": "View details"
+      }
+    },
+    "article": {
+      "tags": "Tags:",
+      "all_topics": "All topics",
+      "by_author": "by {{ author }}",
+      "posted_in": "Posted in",
+      "read_more": "Read more",
+      "back_to_blog": "Back to {{ title }}"
+    },
+    "comments": {
+      "title": "Leave a comment",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "post": "Post comment",
+      "moderated": "Please note, comments must be approved before they are published",
+      "success_moderated": "Your comment was posted successfully. We will publish it in a little while, as our blog is moderated.",
+      "success": "Your comment was posted successfully! Thank you!",
+      "comments_with_count": {
+        "one": "{{ count }} comment",
+        "other": "{{ count }} comments"
+      }
+    },
+    "password_page": {
+      "login_form_message": "Enter store using password:",
+      "login_form_password_label": "Password",
+      "login_form_password_placeholder": "Your password",
+      "login_form_submit": "Enter",
+      "signup_form_email_label": "Email",
+      "signup_form_success": "We will send you an email right before we open!",
+      "password_link": "Enter using password"
     }
   }
 }

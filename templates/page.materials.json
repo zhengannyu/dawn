@@ -1,0 +1,25 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 28,
+        "padding_bottom": 28
+      }
+    },
+    "90b809a3-e0ec-43fc-8f05-1ecba9b2a9bb": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<h1>123123<h1>\n<h2 class=\"font-black text-center text-white text-5xl tracking-wider py-6\">\n          最好的<span class=\"text-green\">夥伴<\/span>是，需要時都在的\n          <span class=\"text-green\">陪伴<\/span>\n        <\/h2>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    }
+  },
+  "order": [
+    "main",
+    "90b809a3-e0ec-43fc-8f05-1ecba9b2a9bb"
+  ]
+}
