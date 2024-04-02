@@ -2,20 +2,18 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "custom-footer": {
+      "type": "custom-footer",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
     "footer": {
       "type": "footer",
-      "blocks": {
-        "link_list_tXD3yq": {
-          "type": "link_list",
-          "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
-          }
-        }
-      },
-      "block_order": [
-        "link_list_tXD3yq"
-      ],
+      "disabled": true,
       "custom_css": [
 
       ],
@@ -36,6 +34,7 @@
     }
   },
   "order": [
+    "custom-footer",
     "footer"
   ]
 }
