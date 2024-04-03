@@ -40,8 +40,103 @@
         font-weight: 700;
         line-height:150%;
     }
+    .custom-index-services-btnbox{
+        padding:80px 0 0 0;
+        display:flex;
+        flex-flow:row;
+        gap:40px;
+    }
+    .main-button-block{
+        text-decoration: none;
+        border-radius: 40px;
+        padding:32px 52px;
+        width:50%;
+        position: relative;
+        .services-btn-title{
+            font-size:32px;   
+            color:#FFF; 
+            margin:0;
+            padding:0;
+            font-weight:600;
+            letter-spacing: 5px;
+            &.t-gray{
+                color:#373433;
+            }
+        }
+        .textarea{
+            padding:0 20px;
+            display:flex;
+            flex-flow:column;
+            justify-content:center;
+            p{
+                margin-bottom:0px;
+            }
+        }
+    }
+    .arrow-btn{
+        display:flex;
+        flex-flow:row;
+        justify-content:center;
+        align-items:center;
+        position: absolute;
+        right:0px;
+        bottom:0px;
+        z-index:1;
+    }
+    .btn-green{
+        display:flex;
+        flex-flow:row;
+        justify-content:center;
+        align-items:center;
+        width:60px;
+        height:60px;
+        border-radius:35px;
+        position: absolute;
+        top:30px;
+        left:30px;
+        background-color:#CDDE00;
+        &::before {
+            content: url("https://cdn.shopify.com/s/files/1/0822/9892/9425/files/arrow-black.svg?v=1712127365");
+            display: block;
+            width: 22px;
+            margin:7px 0 0 2px ;
+            transform:rotate(0.93turn);
+        }
+    }
+    .btn-gray{
+        display:flex;
+        flex-flow:row;
+        justify-content:center;
+        align-items:center;
+        width:60px;
+        height:60px;
+        border-radius:35px;
+        position: absolute;
+        top:30px;
+        left:30px;
+        background-color:#373433;
+        &::before {
+            content: url("https://cdn.shopify.com/s/files/1/0822/9892/9425/files/union_white.svg?v=1712127819");
+            display: block;
+            width: 22px;
+            margin:7px 0 0 2px ;
+            transform:rotate(0.93turn);
+        }
+    }
     .text-justify{
         text-align:justify;
+    }
+    .flex-row{
+        display:flex;
+        flex-flow:row;
+    }
+    .bg-green{
+        background-color:#CDDE00;
+        color:#373433;
+    }
+    .bg-gray{
+        background-color:#373433;
+        color:#FFFFFF7a;
     }
     {%- endstyle -%}
     
@@ -83,12 +178,32 @@
                       >
                     </div>
                 </div>
+                {% comment %} 服務按鈕 {% endcomment %}
                 <div class="custom-index-services-btnbox">
-                    <a href="">
-                        {{ images['events_illus_1_1.png'] | image_url: width: 180 | image_tag }}
-                        <h4>企業客製化</h4>
-                        <p>我們會根據功能和耐用度，以及「優雅地老化」能力之間的平衡來選擇</p>
-                    </a>
+                    <div class="flex-row main-button-block bg-gray">
+                        {{ images['events_illust_1_1.png'] | image_url: width: 92 | image_tag }}
+                        <div class="textarea">
+                            <h4 class="services-btn-title">大宗採購</h4>
+                            <p>我們會根據功能和耐用度，以及「優雅地老化」能力之間的平衡來選擇</p>
+                        </div>
+                        <a href="" class="arrow-btn">
+                            {{ images['union_gray.svg'] | image_url: width: 90 | image_tag }}
+                            <div class="btn-gray">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="flex-row main-button-block bg-green">
+                        {{ images['events_illust_2_1.png'] | image_url: width: 92 | image_tag }}
+                        <div class="textarea">
+                            <h4 class="services-btn-title t-gray">大宗採購</h4>
+                            <p>我們會根據功能和耐用度，以及「優雅地老化」能力之間的平衡來選擇</p>
+                        </div>
+                        <a href="" class="arrow-btn">
+                            {{ images['union_gray.svg'] | image_url: width: 90 | image_tag }}
+                            <div class="btn-green">
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
           </div>
