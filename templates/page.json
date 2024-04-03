@@ -7,9 +7,19 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "custom-page-title": {
+      "type": "custom-page-title",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "custom-page-title"
   ]
 }
