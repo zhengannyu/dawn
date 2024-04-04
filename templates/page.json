@@ -10,49 +10,16 @@
     },
     "custom-page-title": {
       "type": "custom-page-title",
-      "settings": {
-      }
-    },
-    "rich_text_KzHU4i": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_7NqMYC": {
-          "type": "heading",
-          "settings": {
-            "heading": "{{ page.title }}",
-            "heading_size": "h1"
-          }
-        },
-        "button_gYypYi": {
-          "type": "button",
-          "settings": {
-            "button_label": "Button label",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_7NqMYC",
-        "text_QyDP9N",
-        "button_gYypYi"
+      "custom_css": [
+        ".big-title {color: #373433;}",
+        "span {color: #cdde00;}"
       ],
       "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     }
   },
   "order": [
     "main",
-    "custom-page-title",
-    "rich_text_KzHU4i"
+    "custom-page-title"
   ]
 }
