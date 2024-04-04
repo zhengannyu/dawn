@@ -23,12 +23,6 @@
             "heading_size": "h1"
           }
         },
-        "text_QyDP9N": {
-          "type": "text",
-          "settings": {
-            "text": "<p>{{ page.metafields.custom.herotitle.value }}<\/p>"
-          }
-        },
         "button_gYypYi": {
           "type": "button",
           "settings": {
