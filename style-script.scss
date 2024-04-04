@@ -9,5 +9,9 @@ opacity: 60;
 line-height: 150%;
 position: absolute;
 position: relative;
-letter-spacing: 
+overflow: hidden
+display: flex;
+flex-flow: row;
+flex-shrink: 0;
+gap:20px;
         }

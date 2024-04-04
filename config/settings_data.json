@@ -393,7 +393,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".text-green {color: #ff0000;}"
+      ""
     ]
   }
 }

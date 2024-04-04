@@ -1,0 +1,41 @@
+{%- style -%} 
+.sliderimg-wrapper{
+  width:100vw;
+  height:300px;
+  display: flex;
+  flex-flow: row;
+  gap:20px;
+  overflow:hidden;
+  position: relative;
+  .sliderimg{
+    flex-shrink: 0;
+    width:28%;
+    height:300px;
+    border-radius: 20px;
+    overflow:hidden;
+    transform: translateX(-20%);
+    animation: slideAnimation 15s linear infinite;
+  }
+
+  @keyframes slideAnimation {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+}
+{%- endstyle -%}
+<div class="custom-index-services">
+    <div class="sliderimg-wrapper">
+      {% assign arrayofsliderimgs = page.metafields.custom.sliderimg.value %}
+      {% if arrayofsliderimgs %}
+        {% for sliderimg in arrayofsliderimgs %}
+          <div class="sliderimg">
+            <img id="{{ sliderimg.id }}" src="{{ sliderimg | image_url: height:300 }}">
+          </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+</div>
