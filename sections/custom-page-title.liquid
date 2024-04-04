@@ -5,11 +5,12 @@
     .big-title{
         font-size:64px;
         font-weight:900;
+        color:#CDDE00;
+        span{
         color:#373433;
+        }
     }
-    span.green{
-            color:#CDDE00;
-    }
+    
     .zh-title{
         font-size:16px;
         letter-spacing:5px;
@@ -29,7 +30,7 @@
         <div class="page-title">
             {% assign customMeta = page.metafields.custom.pagetitle %}
             {% if customMeta %}
-            <h1 class="big-title">{{ customMeta.value[0] }} <span class="green">{{ customMeta.value[1] }}</span></h1>
+            <h1 class="big-title">{{ customMeta.value[0] }} <span>{{ customMeta.value[1] }}</span></h1>
             <h1 class="zh-title">{{ customMeta.value[2] }}</h1>
             {% endif %}
         </div>
