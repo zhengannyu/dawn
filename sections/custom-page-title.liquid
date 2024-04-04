@@ -17,9 +17,21 @@
 {%- endstyle -%}
 <div class="custom-index-services">
     <div class="page-width">
+        {% comment %} 
+        <h1>
+            assign 陣列名稱 = 分類.metafields.custom.Key
+            {% assign customMeta = page.metafields.custom.pagetitle %}
+            {% if customMeta %} 如果 陣列存在
+                {{ customMeta.value[0] }} 渲染 .value[0] = 第一個
+            {% endif %}
+        </h1>
+         {% endcomment %}
         <div class="page-title">
-            <h1 class="big-title">About <span class="green">Us</span></h1>
-            <h1 class="zh-title">關於我們</h1>
+            {% assign customMeta = page.metafields.custom.pagetitle %}
+            {% if customMeta %}
+            <h1 class="big-title">{{ customMeta.value[0] }} <span class="green">{{ customMeta.value[1] }}</span></h1>
+            <h1 class="zh-title">{{ customMeta.value[2] }}</h1>
+            {% endif %}
         </div>
     </div>
 </div>
