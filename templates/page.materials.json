@@ -13,17 +13,10 @@
       "custom_css": [],
       "settings": {
       }
-    },
-   "custom-page-imgslider": {
-      "type": "custom-page-imgslider",
-      "custom_css": [],
-      "settings": {
-      }
     }
   },
   "order": [
     "main",
-    "custom-page-title",
-    "custom-page-imgslider"
+    "custom-page-title"
   ]
 }
