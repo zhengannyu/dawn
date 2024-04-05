@@ -1,15 +1,12 @@
-{%  render 'material-card' %}
-
-{%  schema  %}
-{
-    "name":"merterial-section",
-    "settings": []
-}
-{% endschema %}
-
-{%style%}
-{%endstyle%}
-
-{% javascript %}
-    
-{% endjavascript %}
+    <div class="page-width">
+        <div class="page-title">
+            <h1 class="big-title">Our<br>
+            Materials</h1>
+            <h1 class="zh-title">我們的材質</h1>
+        </div>
+        <div class="material-wrapper">
+            {%for data in shop.metaobjects.materials.values %}
+                {%render 'material-card', name: data.name, info: data.info, photo: data.img %}
+            {% endfor %}
+        </div>
+    </div>

@@ -1,7 +1,32 @@
-
-    <div class="">
-        <h1>01</h1>
-        <h1>潛水布</h1>
-        <h1>NEOPRENE</h1>
-        <p>潛水布是一種機能性材料。具有高彈性的特點，能夠有效減緩撞擊，儘管質地輕盈，但能夠承受重量而不變形。此外，它具備防撥水和耐髒汙的性能，在極端氣候中仍能保持穩定的物性，同時能有效保溫和保冷。其觸感柔軟，可減輕長時間背在肩上的壓力，另外，直接放入洗衣機清洗非常方便。潛水布的耐久特性有助於減少對環境的影響，也能降低廢棄物的產生。</p>
+{%- style -%}
+    .material-wrapper{
+        margin:0 0 0 auto;
+        width: 70%;
+    }
+    .material-card{
+        display: flex;
+        gap: 32px;
+        padding:32px 0;
+        align-items: end;
+    }
+    .material-title{
+        font-size:32px;
+        font-weight:600;
+        color: #373433;
+    }
+    .material-order{
+        font-size:18px;
+        vertical-align:super;
+    }
+{%- endstyle -%}
+    <div class="material-card">
+        <img id="{{ photo.id }}" src="{{ photo | image_url: height:300 }}">
+        <div class="material-textarea">
+            <div class="material-title">
+                <span class="material-order">{{ name.value[0] }}</span>
+                <span class="zh">{{ name.value[1] }}</span>
+                <span class="en">{{ name.value[2] }}</span>
+            </div>
+            <p class="material-info">{{ info }}</p>
+        </div>
     </div>
