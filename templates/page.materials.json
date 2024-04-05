@@ -13,10 +13,17 @@
       "custom_css": [],
       "settings": {
       }
+    },
+    "materials-section": {
+      "type": "materials-section",
+      "custom_css": [],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "custom-page-title"
+    "custom-page-title",
+    "materials-section"
   ]
 }
