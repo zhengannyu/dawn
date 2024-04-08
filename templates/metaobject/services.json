@@ -3,10 +3,6 @@
     "services-title": {
       "type": "services-title",
       "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     },
     "collapsible_content_jFJB6E": {

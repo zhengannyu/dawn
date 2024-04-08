@@ -16,25 +16,31 @@
         letter-spacing:5px;
     }
 {%- endstyle -%}
-{% assign service_handle_url = request.path | split: "/" | last %}
+{% comment %} {% assign service_handle_url = request.path | split: "/" | last %} {% endcomment %}
 {% assign services = shop.metaobjects.services.values %}
-{% assign fqas = shop.metaobjects.fqa.values | where: "type", "odm" %}
-<script>console.log({{ fqas | json }});</script>
+{% assign fqas = shop.metaobjects.fqa.values | where: "type", "bulk" %}
+{% assign photos = shop.metaobjects.odm_slider_1.values %}
 
 <div class="custom-index-services">
-    <div class="page-width">
-        {% for service in services %}
-        {% comment %} <script>console.log({{ service.system.handle | json }});</script> {% endcomment %}
-        {% if service.system.handle == service_handle_url %}
-            {% render 'page-title', herotitle: service.herotitle %}
-            <p>{{ service.title }}</p>
-            <p>{{ service.description }}</p>
+    {% for service in services %}
+        {% if service.system.handle == "bulk-purchase" %}
+        <div class="page-width">
+            {% render 'page-title', herotitle: service.herotitle %}      
+        </div>
+        <div class="w-100">
+            {% for photo in photos %}
+                <img src="{{ photo.image | image_url: height:300 }}">
+            {% endfor %}
+        </div>
+        <h1>{{ service.title }}</h1>
+        <p>{{ service.description }}</p>
+        <div class="fqa">
             {% for fqa in fqas %}
-                    <p>{{fqa.question}}</p>
-                    <p>{{fqa.answer}}</p>
-                {% endfor %}
-                <p>{{ service.subtitle }}</p>
-            {% endif %}
-        {% endfor %}
-    </div>
+               <p>{{fqa.question}}</p>
+                <p>{{fqa.answer}}</p>
+            {% endfor %}
+        </div>
+        <p>{{ service.subtitle }}</p>
+        {% endif %}
+    {% endfor %}
 </div>
