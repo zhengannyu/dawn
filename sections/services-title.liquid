@@ -1,0 +1,40 @@
+{%- style -%} 
+    .page-title{
+        margin:120px 0;
+    }
+    .big-title{
+        font-size:64px;
+        font-weight:900;
+        color:#CDDE00;
+        span{
+        color:#373433;
+        }
+    }
+    
+    .zh-title{
+        font-size:16px;
+        letter-spacing:5px;
+    }
+{%- endstyle -%}
+{% assign service_handle_url = request.path | split: "/" | last %}
+{% assign services = shop.metaobjects.services.values %}
+{% assign fqas = shop.metaobjects.fqa.values | where: "type", "odm" %}
+<script>console.log({{ fqas | json }});</script>
+
+<div class="custom-index-services">
+    <div class="page-width">
+        {% for service in services %}
+        {% comment %} <script>console.log({{ service.system.handle | json }});</script> {% endcomment %}
+        {% if service.system.handle == service_handle_url %}
+            {% render 'page-title', herotitle: service.herotitle %}
+            <p>{{ service.title }}</p>
+            <p>{{ service.description }}</p>
+            {% for fqa in fqas %}
+                    <p>{{fqa.question}}</p>
+                    <p>{{fqa.answer}}</p>
+                {% endfor %}
+                <p>{{ service.subtitle }}</p>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>
