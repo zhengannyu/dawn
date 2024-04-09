@@ -1,0 +1,54 @@
+{%- style -%} 
+    .page-title{
+        margin:120px 0;
+    }
+    .big-title{
+        font-size:64px;
+        font-weight:900;
+        color:#CDDE00;
+        span{
+        color:#373433;
+        }
+    }
+    
+    .zh-title{
+        font-size:16px;
+        letter-spacing:5px;
+    }
+{%- endstyle -%}
+{% comment %} {% assign service_handle_url = request.path | split: "/" | last %} {% endcomment %}
+{% assign services = shop.metaobjects.services.values %}
+{% assign fqas = shop.metaobjects.fqa.values | where: "type", "custom" %}
+{% assign photos = shop.metaobjects.slider_service.values %}
+{% assign logos = shop.metaobjects.brands.values %}
+<div class="custom-index-services">
+    {% for service in services %}
+        {% if service.system.handle == "custom" %}
+        <div class="page-width">
+            {% render 'page-title', herotitle: service.herotitle %}      
+        </div>
+        <div class="w-100">
+            {% for picture in photos %}
+                <img src="{{ picture.photo | image_url: height:300 }}">
+            {% endfor %}
+            </div>
+            <h1>{{ service.title }}</h1>
+            <p>{{ service.description }}</p>
+            <div class="page-width">
+                <div class="fqa">
+                    {% for fqa in fqas %}
+                        <p>{{fqa.question}}</p>
+                        <p>{{fqa.answer}}</p>
+                {% endfor %}
+                </div>
+                <div class="page-title">
+                    <h1 class="big-title">{{ service.subtitle.value[0] }} <span>{{ service.subtitle.value[1] }}</span></h1>
+                    <h1 class="zh-title">{{ service.subtitle.value[2] }}</h1>
+                {% for logo in logos %}
+                    <img src="{{ logo.photo | image_url: height:300 }}">
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>

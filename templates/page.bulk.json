@@ -8,14 +8,6 @@
         "padding_bottom": 28
       }
     },
-    "services-title": {
-      "type": "services-title",
-      "custom_css": [
-
-      ],
-      "settings": {
-      }
-    },
     "service-bulk": {
       "type": "service-bulk",
       "custom_css": [
