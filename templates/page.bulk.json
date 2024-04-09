@@ -8,16 +8,16 @@
         "padding_bottom": 28
       }
     },
-    "custom-page-title": {
-      "type": "custom-page-title",
+    "services-title": {
+      "type": "services-title",
       "custom_css": [
 
       ],
       "settings": {
       }
     },
-    "custom-page-imgslider": {
-      "type": "custom-page-imgslider",
+    "service-bulk": {
+      "type": "service-bulk",
       "custom_css": [
 
       ],
@@ -27,7 +27,7 @@
   },
   "order": [
     "main",
-    "custom-page-title",
-    "custom-page-imgslider"
+    "services-title",
+    "service-bulk"
   ]
 }
