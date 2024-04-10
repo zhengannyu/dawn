@@ -18,13 +18,58 @@
     transform: translateX(-20%);
   }
 }
+.about-description-block{
+  display: flex;  
+  flex-flow: row;
+  align-items: start;
+  margin:120px 0;
+}
+.about-list-title{
+  width:30%;
+}
+.about-list-title::before {
+    display:inline-block;
+    content:"";
+    margin-right:12px;
+    width: 12px;
+    height:12px;
+    border-radius: 50px;
+    background-color:#CDDE00;
+}
+.description{
+  max-width:700px;
+  h3{
+    font-size:28px;
+    font-weight:600;
+    letter-space:5px;
+    margin:12px 0;
+  }
+  p{
+    text-align: justify;
+  }
+}
 {%- endstyle -%}
 
 {% assign photos = shop.metaobjects.sliders_about.values %}
-<div class="custom-index-services">
+
     <div class="sliderimg-wrapper">
         {% for picture in photos %}
             <img class="slide" src="{{ picture.photo | image_url: height:800 }}">
         {% endfor %}
     </div>
-</div>
+    <div class="page-width">
+    <div class="about-description-block">
+        <h4 class="about-list-title">ABOUT AXON</h4>
+        <div class="description">
+          <h3>最好的夥伴是，需要時都在的陪伴</h3>
+          <p>Axon於2010年在台灣成立，以「Your Daily Partner」的理念出發，不斷地探索、構思、嘗試，觀察生活場景裡的需求時刻，思考愉悅從何而來，然後化為設計行動，打造兼具實用與個性的產品，無論是重要的工作、輕鬆的旅行，或是巷弄漫走，做你每一天最好的夥伴，與你共創屬於自己的充實日常。</p>
+        </div>
+    </div>
+    <div class="about-description-block">
+        <h4 class="about-list-title">ABOUT AXON</h4>
+        <div class="description">
+          <h3>最好的夥伴是，需要時都在的陪伴</h3>
+          <p>Axon於2010年在台灣成立，以「Your Daily Partner」的理念出發，不斷地探索、構思、嘗試，觀察生活場景裡的需求時刻，思考愉悅從何而來，然後化為設計行動，打造兼具實用與個性的產品，無論是重要的工作、輕鬆的旅行，或是巷弄漫走，做你每一天最好的夥伴，與你共創屬於自己的充實日常。</p>
+        </div>
+    </div>
+    </div>
