@@ -8,14 +8,14 @@
         "padding_bottom": 28
       }
     },
-    "custom-page-title": {
-      "type": "custom-page-title",
+    "custom-herotitle": {
+      "type": "custom-herotitle",
       "custom_css": [],
       "settings": {
       }
     },
-   "custom-page-imgslider": {
-      "type": "custom-page-imgslider",
+   "custom-page-about": {
+      "type": "custom-page-about",
       "custom_css": [],
       "settings": {
       }
@@ -23,7 +23,7 @@
   },
   "order": [
     "main",
-    "custom-page-title",
-    "custom-page-imgslider"
+    "custom-herotitle",
+    "custom-page-about"
   ]
 }

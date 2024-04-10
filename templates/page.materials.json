@@ -8,8 +8,8 @@
         "padding_bottom": 28
       }
     },
-    "materials-section": {
-      "type": "materials-section",
+    "custom-page-materials": {
+      "type": "custom-page-materials",
       "custom_css": [],
       "settings": {
       }
@@ -17,6 +17,6 @@
   },
   "order": [
     "main",
-    "materials-section"
+    "custom-page-materials"
   ]
 }

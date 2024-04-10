@@ -8,8 +8,8 @@
         "padding_bottom": 28
       }
     },
-    "custom-page-title": {
-      "type": "custom-page-title",
+    "custom-herotitle": {
+      "type": "custom-herotitle",
       "custom_css": [
         ".big-title {color: #373433;}",
         "span {color: #cdde00;}"
@@ -20,6 +20,6 @@
   },
   "order": [
     "main",
-    "custom-page-title"
+    "custom-herotitle"
   ]
 }

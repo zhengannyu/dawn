@@ -1,0 +1,30 @@
+{%- style -%} 
+.sliderimg-wrapper{
+  width:100vw;
+  display: flex;
+  flex-flow: row;
+  gap:20px;
+  overflow:hidden;
+  position: relative;
+  .slide{
+    flex-shrink: 0;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    width:28%;
+    border-radius: 20px;
+    overflow:hidden;
+    transform: translateX(-20%);
+  }
+}
+{%- endstyle -%}
+
+{% assign photos = shop.metaobjects.sliders_about.values %}
+<div class="custom-index-services">
+    <div class="sliderimg-wrapper">
+        {% for picture in photos %}
+            <img class="slide" src="{{ picture.photo | image_url: height:800 }}">
+        {% endfor %}
+    </div>
+</div>

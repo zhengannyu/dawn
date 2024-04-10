@@ -8,8 +8,8 @@
         "padding_bottom": 28
       }
     },
-    "services-custom": {
-      "type": "services-custom",
+    "custom-page-custom": {
+      "type": "custom-page-custom",
       "custom_css": [
       ],
       "settings": {
@@ -18,6 +18,6 @@
   },
   "order": [
     "main",
-    "service-custom"
+    "custom-page-custom"
   ]
 }

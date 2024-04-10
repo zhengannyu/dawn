@@ -88,8 +88,8 @@
         "padding_bottom": 36
       }
     },
-    "custom-index-services": {
-      "type": "custom-index-services",
+    "custom-page-index": {
+      "type": "custom-page-index-service",
       "settings": {
       }
     }
@@ -97,6 +97,6 @@
   "order": [
     "23ae5ea2-ee7c-4f3d-bae6-614b1f160bf8",
     "featured_collection",
-    "custom-index-services"
+    "custom-page-index"
   ]
 }
