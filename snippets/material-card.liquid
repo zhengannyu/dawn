@@ -20,7 +20,14 @@
     }
 {%- endstyle -%}
     <div class="material-card">
-        <img id="{{ photo.id }}" src="{{ photo | image_url: height:300 }}">
+        <img 
+        class="slide"
+        srcset="{{ photo | image_url: width: 300 }}"
+        sizes="(min-width: 400px) 298px, 40vw"
+        alt=""
+        width="auto"
+        height="100%"
+        >
         <div class="material-textarea">
             <div class="material-title">
                 <span class="material-order">{{ name.value[0] }}</span>

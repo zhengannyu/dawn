@@ -24,7 +24,14 @@
 <div class="custom-index-services">
     <div class="sliderimg-wrapper">
         {% for picture in photos %}
-            <img class="slide" src="{{ picture.photo | image_url: height:800 }}">
+          <img 
+          class="slide"
+          srcset="{{ picture.photo | image_url: width: 800 }}"
+          sizes="(min-width: 400px) 298px, 40vw"
+          alt=""
+          width="auto"
+          height="100%"
+          >
         {% endfor %}
     </div>
 </div>

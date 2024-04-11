@@ -1,19 +1,75 @@
-<div class="flex flex-col justify-center bg-black min-h-screen relative">
-        <h1 class="font-black text-center text-white text-7xl tracking-widest pb-8">
-          Hi, we're AXON.
-        </h1>
-        <h2 class="font-black text-center text-white text-5xl tracking-wider py-6">
-          最好的<span class="text-green">夥伴</span>是，需要時都在的
-          <span class="text-green">陪伴</span>
+{% style  %}
+  .index-about-section{
+    margin-top:80px;
+    min-height:100vh;
+    max-height:1400px;
+    position: relative;
+    .textarea{
+      max-width:740px;
+    }
+    .about-subtitle{
+      position: absolute;
+      transform: rotateZ(90deg);
+      top: 15%;
+      right: -3%;
+    }
+  }
+  .index-material-section{
+    margin:160px 0;
+    min-height:100vh;
+    max-height:2000px;
+    .textarea{
+      width:50%;
+      justify-content:space-between;
+      p{
+        width:75%;
+      }
+    }
+    .image{
+      width:50%;
+      min-height:670px;
+      overflow:hidden;
+      border-radius:50px;
+    }
+  }
+{% endstyle %}
+<div class="index-about-section flex-col bg-gray center">
+  <h2 class="big-title text-white about-subtitle"><span class="text-green">Our</span> Story</h2>
+  <div class="textarea">
+        <h1 class="display-1 text-white">Your Daily Partner.</h1>
+        <h2 class="display-2 text-white">
+          最好的<span class="text-green">夥伴</span>是，需要時都在的<span class="text-green">陪伴</span>
         </h2>
-        <div class="max-w-screen-md mx-auto px-2">
-          <p class="text-white leading-8">
-            AXON十年來不斷地探索、構思、嘗試，觀察生活場景裡的需求時刻，並化為設計行動，打造兼具實用與個性的產品。選用潛水布Neoprene作為主要材質，從設計研發到生產製造都在台灣發生。簡約而圓潤的設計、嚴選面料的耐用性，期望來到我們生活中的夥伴，有點討喜、有點實在。
-          </p>
-          <p class="text-white leading-8 pt-4">
-            無論是重要的工作、輕鬆的旅行，或是巷弄漫走，
-            <br />
-            做你每一天最好的夥伴，與你共創屬於自己的充實日常。
-          </p>
-        </div>
+        <p class="text-justify line-h250">
+          AXON十年來不斷地探索、構思、嘗試，觀察生活場景裡的需求時刻，並化為設計行動，打造兼具實用與個性的產品。選用潛水布Neoprene作為主要材質，從設計研發到生產製造都在台灣發生。簡約而圓潤的設計、嚴選面料的耐用性，期望來到我們生活中的夥伴，有點討喜、有點實在。
+          <br />
+          <br />
+          無論是重要的工作、輕鬆的旅行，或是巷弄漫走，
+          <br />
+          做你每一天最好的夥伴，與你共創屬於自己的充實日常。
+        </p>
+  </div>
+</div>
+<div class="index-material-section">
+  <div class="page-width flex-row">
+    <div class="textarea flex-col">
+      <h2 class="big-title"><span class="text-green">Our</span> Materials</h2>
+      <div>
+        <h3 class="heading-2">It starts with the <span class="text-green">materials</span>,
+          <br />Find out What <span class="text-green">AXON</span> is made of.
+        </h3>
+        <p class="text-justify">我們會根據功能和耐用度，以及「優雅地老化」能力之間的平衡來選擇製作素材。另外，我們亦致力採購有助保護環境、具有永續性的材質 － 比如以再生及植物衍生素材製成的織物，或是對環境影響最小的皮革</p>
+        <a href="https://anyu-hydrogen.myshopify.com/pages/materials" class="normal-btn">Learn More</a>
+      </div>
+    </div>
+    <div class="image flex-row center">
+      <img
+      srcset="{{ images['index_img_tc04_1.png'] | image_url: width: 800 }}"
+      sizes="(min-width: 400px) 298px, 40vw"
+      alt=""
+      width="auto"
+      height="100%"
+      >
+    </div>
+  </div>
 </div>
