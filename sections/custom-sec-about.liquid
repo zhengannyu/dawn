@@ -29,12 +29,12 @@
       width:50%;
       min-height:670px;
       overflow:hidden;
-      border-radius:50px;
+      border-radius:50px 50px 0 50px;
     }
   }
 {% endstyle %}
 <div class="index-about-section flex-col bg-gray center">
-  <h2 class="big-title text-white about-subtitle"><span class="text-green">Our</span> Story</h2>
+  <h2 class="heading-1 text-white about-subtitle"><span class="text-green">Our</span> Story</h2>
   <div class="textarea">
         <h1 class="display-1 text-white">Your Daily Partner.</h1>
         <h2 class="display-2 text-white">
@@ -53,7 +53,7 @@
 <div class="index-material-section">
   <div class="page-width flex-row">
     <div class="textarea flex-col">
-      <h2 class="big-title"><span class="text-green">Our</span> Materials</h2>
+      <h2 class="heading-1"><span class="text-green">Our</span> Materials</h2>
       <div>
         <h3 class="heading-2">It starts with the <span class="text-green">materials</span>,
           <br />Find out What <span class="text-green">AXON</span> is made of.
@@ -62,7 +62,7 @@
         <a href="https://anyu-hydrogen.myshopify.com/pages/materials" class="normal-btn">Learn More</a>
       </div>
     </div>
-    <div class="image flex-row center">
+    <div class="image flex-row center p-relative">
       <img
       srcset="{{ images['index_img_tc04_1.png'] | image_url: width: 800 }}"
       sizes="(min-width: 400px) 298px, 40vw"
@@ -70,6 +70,11 @@
       width="auto"
       height="100%"
       >
+      <a href="" class="arrow-btn">
+          {{ images['union_white.svg'] | image_url: width: 90 | image_tag }}
+          <div class="btn-gray">
+          </div>
+      </a>
     </div>
   </div>
 </div>

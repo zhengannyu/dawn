@@ -39,6 +39,9 @@
     top: 15%;
     right: -3%;
 }
+.p-relative{
+    position: relative;
+}
 .line-h250{
     line-height: 250%;
 }
@@ -85,11 +88,13 @@
 
 /* BUTTON */
 .normal-btn{
+    display: inline-block;
     background-color: #CDDE00;
     color: #373433;
+    margin-top: 40px;
     padding: 10px 40px;
     border-radius: 30px;
-    text-decoration: ;
+    text-decoration: none;
 }
 .arrow-btn{
     display:flex;
@@ -134,7 +139,7 @@
     left:30px;
     background-color:#373433;
     &::before {
-        content: url("https://cdn.shopify.com/s/files/1/0822/9892/9425/files/union_white.svg?v=1712127819");
+        content: url("https://cdn.shopify.com/s/files/1/0822/9892/9425/files/arrow_white.svg?v=1712127819");
         display: block;
         width: 22px;
         margin:7px 0 0 2px ;
