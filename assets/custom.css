@@ -1,0 +1,118 @@
+.test{
+    height:100px;
+    background-color:#000;
+}
+.py-40{
+    padding: 40px 0;
+}
+
+/* FONT */
+.display-1{
+    font-size: 64px;
+    font-weight: 700;
+    line-height:150%;
+}
+.display-2{
+    font-size: 48px;
+    font-weight: 700;
+    line-height:150%;
+}
+.heading-1{
+    font-size: 32px;
+    font-weight: 700;
+}
+.heading-2{
+    font-size: 28px;
+}
+.heading-3{
+    font-size: 24px;
+    font-weight: 700;
+    line-height:150%;
+}
+.text-justify{
+    text-align:justify;
+}
+
+/* Flex */
+.flex-row{
+    display:flex;
+    flex-flow:row;
+}
+.flex-col{
+    display:flex;
+    flex-flow:column;
+}
+
+
+.big-title{
+    font-size:36px;
+    font-weight:900;
+    color:#373433;
+}
+/* COLOR */
+.bg-green{
+    background-color:#CDDE00;
+    color:#373433;
+}
+.bg-gray{
+    background-color:#373433;
+    color:#FFFFFF7a;
+}
+.text-green{
+        color:#CDDE00;
+}
+.text-gray{
+    color:#373433;
+}
+
+/* BUTTON */
+.arrow-btn{
+    display:flex;
+    flex-flow:row;
+    justify-content:center;
+    align-items:center;
+    position: absolute;
+    right:0px;
+    bottom:0px;
+    z-index:1;
+}
+.btn-green{
+    display:flex;
+    flex-flow:row;
+    justify-content:center;
+    align-items:center;
+    width:60px;
+    height:60px;
+    border-radius:35px;
+    position: absolute;
+    top:30px;
+    left:30px;
+    background-color:#CDDE00;
+    &::before {
+        content: url("https://cdn.shopify.com/s/files/1/0822/9892/9425/files/arrow-black.svg?v=1712127365");
+        display: block;
+        width: 22px;
+        margin:7px 0 0 2px ;
+        transform:rotate(0.93turn);
+    }
+}
+.btn-gray{
+    display:flex;
+    flex-flow:row;
+    justify-content:center;
+    align-items:center;
+    width:60px;
+    height:60px;
+    border-radius:35px;
+    position: absolute;
+    top:30px;
+    left:30px;
+    background-color:#373433;
+    &::before {
+        content: url("https://cdn.shopify.com/s/files/1/0822/9892/9425/files/union_white.svg?v=1712127819");
+        display: block;
+        width: 22px;
+        margin:7px 0 0 2px ;
+        transform:rotate(0.93turn);
+    }
+}

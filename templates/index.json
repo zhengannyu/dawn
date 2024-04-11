@@ -72,7 +72,7 @@
         "products_to_show": 4,
         "columns_desktop": 4,
         "full_width": false,
-        "show_view_all": true,
+        "show_view_all": false,
         "view_all_style": "solid",
         "enable_desktop_slider": false,
         "color_scheme": "background-1",
@@ -88,8 +88,55 @@
         "padding_bottom": 36
       }
     },
-    "custom-page-index": {
-      "type": "custom-page-index-service",
+    "rich_text_wCpw6j": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_kxNTTG": {
+          "type": "heading",
+          "settings": {
+            "heading": "Talk about your brand",
+            "heading_size": "h1"
+          }
+        },
+        "text_eFeHgE": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+          }
+        },
+        "button_cjKLy3": {
+          "type": "button",
+          "settings": {
+            "button_label": "查看AXON產品型錄",
+            "button_link": "shopify:\/\/pages\/products",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kxNTTG",
+        "text_eFeHgE",
+        "button_cjKLy3"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "custom-sec-about": {
+      "type": "custom-sec-about",
+      "settings": {
+      }
+    },
+    "custom-sec-service": {
+      "type": "custom-sec-service",
       "settings": {
       }
     }
@@ -97,6 +144,8 @@
   "order": [
     "23ae5ea2-ee7c-4f3d-bae6-614b1f160bf8",
     "featured_collection",
-    "custom-page-index"
+    "rich_text_wCpw6j",
+    "custom-sec-about",
+    "custom-sec-service"
   ]
 }

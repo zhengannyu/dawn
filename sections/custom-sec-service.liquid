@@ -1,0 +1,118 @@
+{%- style -%}
+    .index-service-section{
+        padding:100px 0;
+        background-color:#EFEFEF;
+        border-radius: 100px;
+        
+        .service-textarea{
+        width:48%;
+        padding:80px 80px 80px 40px;
+            &.r{
+                padding:80px 40px 80px 80px;
+            }
+        }
+        .service-image{
+            width:52%;
+        }
+        .services-btn-wrapper{
+            padding:80px 0 0 0;
+            display:flex;
+            flex-flow:row;
+            gap:40px;
+            .heading-1{
+                color:#FFF; 
+                margin:0;
+                padding:0;
+                letter-spacing: 5px;
+                &.text-gray{
+                    color:#373433;
+                }
+            }
+            .main-button-block{
+                text-decoration: none;
+                border-radius: 40px;
+                padding:32px 52px;
+                width:50%;
+                position: relative;
+
+                .textarea{
+                    padding:0 20px;
+                    display:flex;
+                    flex-flow:column;
+                    justify-content:center;
+                    p{
+                        margin-bottom:0px;
+                    }
+                }
+            }
+        }
+    }
+    
+   
+
+
+
+{%- endstyle -%}
+
+<div class="index-service-section">
+    <div class="page-width">
+        <div class="big-title py-40"><span class="text-green">Our</span> Services</div>
+        <div class="flex-row py-40">
+            <div class="service-textarea">
+                <h3 class="heading-3">以潛水布Neoprene為主要材質<br>提供從設計到製造的完整專業服務。</h3>
+                <p class="text-justify">我們提供多樣化的服務方案讓您選擇，從客製商品訂製到現有版型Logo印刷，就讓最專業的Axon的設計團隊，為您打造最有質感的商品吧！</p>
+            </div>
+            <div class="service-image">
+                <img
+                srcset="{{ images['index_img_tc02_1.png'] | image_url: width: 800 }}"
+                sizes="(min-width: 400px) 298px, 50vw"
+                alt=""
+                width="100%"
+                height=""
+                >
+            </div>
+        </div>
+        <div class="flex-row">
+            <div class="service-image">
+                <img
+                srcset="{{ images['index_img_tc04_1.png'] | image_url: width: 800 }}"
+                sizes="(min-width: 400px) 298px, 50vw"
+                alt=""
+                width="100%"
+                height=""
+                >
+            </div>
+            <div class="service-textarea">
+                <h3 class="heading-3">真摯的情感和用心的服務，<br>能夠將合作昇華為難忘的回憶。</h3>
+                <p class="text-justify">與客戶建立長期互惠的合作關係，這是AXON從始至終堅持的服務理念！在每一次的合作中，我們都將您的需求視為最優先的事情。</p>
+            </div>
+        </div>
+        {% comment %} 服務按鈕 {% endcomment %}
+        <div class="services-btn-wrapper">
+            <div class="flex-row main-button-block bg-gray">
+                {{ images['events_illust_1_1.png'] | image_url: width: 92 | image_tag }}
+                <div class="textarea">
+                    <h4 class="heading-1">大宗採購</h4>
+                    <p>我們會根據功能和耐用度，以及「優雅地老化」能力之間的平衡來選擇</p>
+                </div>
+                <a href="" class="arrow-btn">
+                    {{ images['union_gray.svg'] | image_url: width: 90 | image_tag }}
+                    <div class="btn-gray">
+                    </div>
+                </a>
+            </div>
+            <div class="flex-row main-button-block bg-green">
+                {{ images['events_illust_2_1.png'] | image_url: width: 92 | image_tag }}
+                <div class="textarea">
+                    <h4 class="heading-1 text-gray">大宗採購</h4>
+                    <p>我們會根據功能和耐用度，以及「優雅地老化」能力之間的平衡來選擇</p>
+                </div>
+                <a href="" class="arrow-btn">
+                    {{ images['union_gray.svg'] | image_url: width: 90 | image_tag }}
+                    <div class="btn-green">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
