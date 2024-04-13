@@ -1,34 +1,67 @@
+// Padding
 .test{
     height:100px;
     background-color:#000;
 }
-.py-40{
+.py-md-40{
     padding: 40px 0;
+    @media screen and (max-width: 600px) {
+    padding: 20px 0;
+    }
 }
-
+.px-40{
+    padding: 0 40px;
+}
+.flex-md-row.mb-reverse{
+    @media screen and (max-width: 600px) {
+        flex-direction: column-reverse;
+    }
+}
+.mb-none{
+    @media screen and (max-width: 600px) {
+        display:none !important;
+    }
+}
 /* FONT */
 .display-1{
     font-size: 64px;
     font-weight: 700;
     line-height:150%;
+    @media screen and (max-width: 600px) {
+        font-size: 24px;
+    }
 }
 .display-2{
     font-size: 48px;
     font-weight: 700;
     line-height:150%;
+
+    @media screen and (max-width: 600px) {
+        font-size: 22px;
+    }
 }
 .heading-1{
     font-size: 32px;
     font-weight: 700;
+
+    @media screen and (max-width: 600px) {
+        font-size: 22px;
+    }
 }
 .heading-2{
     font-size: 28px;
     font-weight: 700;
+    @media screen and (max-width: 600px) {
+        font-size: 20px;
+    }
 }
 .heading-3{
     font-size: 24px;
     font-weight: 700;
     line-height:150%;
+    @media screen and (max-width: 600px) {
+        font-size: 18px;
+    }
 }
 .text-justify{
     text-align:justify;
@@ -56,12 +89,19 @@
 .flex-row{
     display:flex;
     flex-flow:row;
+    }
+.flex-md-row{
+    display:flex;
+    flex-flow:row;
+    @media screen and (max-width: 600px) {
+    flex-flow:column;
+    }
 }
 .flex-col{
     display:flex;
     flex-flow:column;
 }
-.flex-row.center,
+.flex-md-row.center,
 .flex-col.center{
     justify-content:center;
     align-items:center;
@@ -95,6 +135,8 @@
     padding: 10px 40px;
     border-radius: 30px;
     text-decoration: none;
+    max-width: 200px;
+    text-align: center;
 }
 .arrow-btn{
     display:flex;
@@ -105,6 +147,11 @@
     right:0px;
     bottom:0px;
     z-index:1;
+    @media screen and (max-width: 600px) {
+        right:-10px;
+        bottom:-10px;
+        transform: scale(0.8)
+    }
 }
 .btn-green{
     display:flex;
@@ -118,11 +165,8 @@
     top:30px;
     left:30px;
     background-color:#CDDE00;
-    &::before {
-        content: url("https://cdn.shopify.com/s/files/1/0822/9892/9425/files/arrow-black.svg?v=1712127365");
-        display: block;
+    img {
         width: 22px;
-        margin:7px 0 0 2px ;
         transform:rotate(0.93turn);
     }
 }
@@ -138,11 +182,8 @@
     top:30px;
     left:30px;
     background-color:#373433;
-    &::before {
-        content: url("https://cdn.shopify.com/s/files/1/0822/9892/9425/files/arrow_white.svg?v=1712127819");
-        display: block;
+    img {
         width: 22px;
-        margin:7px 0 0 2px ;
         transform:rotate(0.93turn);
     }
 }
