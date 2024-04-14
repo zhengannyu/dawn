@@ -1,121 +1,12 @@
+@import "../scss/_font.scss";
+@import "../scss/_layout.scss";
+
 .test {
   height: 100px;
   background-color: #000;
 }
-/* SPACING */
-.py-md-40 {
-  padding: 40px 0;
-  @media screen and (max-width: 600px) {
-    padding: 20px 0;
-  }
-}
-.px-40 {
-  padding: 0 40px;
-}
 
-/* FONT */
-.display-1 {
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 150%;
-  @media screen and (max-width: 600px) {
-    font-size: 24px;
-  }
-}
-.display-2 {
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 150%;
 
-  @media screen and (max-width: 600px) {
-    font-size: 22px;
-  }
-}
-.heading-1 {
-  font-size: 32px;
-  font-weight: 700;
-
-  @media screen and (max-width: 600px) {
-    font-size: 22px;
-  }
-}
-.heading-2 {
-  font-size: 28px;
-  font-weight: 700;
-  @media screen and (max-width: 600px) {
-    font-size: 20px;
-  }
-}
-.heading-3 {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 150%;
-  @media screen and (max-width: 600px) {
-    font-size: 18px;
-  }
-}
-.text-justify {
-  text-align: justify;
-}
-.line-h250 {
-  line-height: 250%;
-}
-.line-h150 {
-  line-height: 150%;
-}
-.spacing-l {
-  letter-spacing: 5px;
-}
-
-// POSITION
-.p-absolute {
-  position: absolute;
-  transform: rotateZ(90deg);
-  top: 15%;
-  right: -3%;
-}
-.p-relative {
-  position: relative;
-}
-
-/* Flex */
-.flex-md-row.mb-reverse {
-  @media screen and (max-width: 600px) {
-    flex-direction: column-reverse;
-  }
-}
-.mb-none {
-  @media screen and (max-width: 600px) {
-    display: none !important;
-  }
-}
-.flex-row {
-  display: flex;
-  flex-flow: row;
-}
-.flex-md-row {
-  display: flex;
-  flex-flow: row;
-  @media screen and (max-width: 600px) {
-    flex-flow: column;
-  }
-}
-.flex-col {
-  display: flex;
-  flex-flow: column;
-}
-.flex-md-row.center,
-.flex-col.center {
-  justify-content: center;
-  align-items: center;
-}
-// WIDTH
-.w-md-50 {
-  width: 50%;
-  @media screen and (max-width: 600px) {
-    width: 100%;
-  }
-}
 /* COLOR */
 .bg-green {
   background-color: #cdde00;
@@ -341,3 +232,7 @@
   margin: 40px 0 80px auto;
   padding: 80px 40px;
 }
+
+.service-fqa{
+padding: 120px 0;
+    }

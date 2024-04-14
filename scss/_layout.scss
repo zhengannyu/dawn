@@ -1,0 +1,68 @@
+// POSITION
+.p-absolute {
+  position: absolute;
+  transform: rotateZ(90deg);
+  top: 15%;
+  right: -3%;
+}
+.p-relative {
+  position: relative;
+}
+
+/* Flex */
+.flex-md-row.mb-reverse {
+  @media screen and (max-width: 600px) {
+    flex-direction: column-reverse;
+  }
+}
+.mb-none {
+  @media screen and (max-width: 600px) {
+    display: none !important;
+  }
+}
+.flex-row {
+  display: flex;
+  flex-flow: row;
+}
+.flex-md-row {
+  display: flex;
+  flex-flow: row;
+  @media screen and (max-width: 600px) {
+    flex-flow: column;
+  }
+}
+.flex-col {
+  display: flex;
+  flex-flow: column;
+}
+.flex-md-row.center,
+.flex-col.center {
+  justify-content: center;
+  align-items: center;
+}
+// WIDTH
+.w-md-50 {
+  width: 50%;
+  @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+.w-md-30 {
+  width: 30%;
+    @media screen and (max-width: 600px) {
+    width: 100%;
+  }
+}
+/* SPACING */
+.py-md-40 {
+  padding: 40px 0;
+  @media screen and (max-width: 600px) {
+    padding: 20px 0;
+  }
+}
+.px-40 {
+  padding: 0 40px;
+}
+.mx-auto {
+ margin: 0 auto; 
+}

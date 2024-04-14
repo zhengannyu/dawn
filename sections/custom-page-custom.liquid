@@ -89,14 +89,20 @@
         </div>
       </div>
       <div class="page-width">
-        <div class="fqa">
-          {% for fqa in fqas %}
-            <p>{{ fqa.question }}</p>
-            <p>{{ fqa.answer }}</p>
-          {% endfor %}
+        <div class="service-fqa flex-md-row">
+          <div class="w-md-30">
+            <h3 class="heading-1">Frequently <br/> asked questions</h3>
+            <h3 class="zh-title">常見問題</h3>
+          </div>
+          <div>
+            {% for fqa in fqas %}
+              <p>{{ fqa.question }}</p>
+              <p>{{ fqa.answer }}</p>
+            {% endfor %}
+          </div>
         </div>
         <div class="page-title">
-          <h1 class="big-title">{{ service.subtitle.value[0] }}
+          <h1 class="big-title text-center">{{ service.subtitle.value[0] }}
             <span>{{ service.subtitle.value[1] }}</span>
           </h1>
           <h1 class="zh-title">{{ service.subtitle.value[2] }}</h1>
