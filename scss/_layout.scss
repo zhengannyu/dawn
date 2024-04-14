@@ -41,18 +41,14 @@
   align-items: center;
 }
 // WIDTH
+
 .w-md-50 {
   width: 50%;
   @media screen and (max-width: 600px) {
     width: 100%;
   }
 }
-.w-md-30 {
-  width: 30%;
-    @media screen and (max-width: 600px) {
-    width: 100%;
-  }
-}
+
 /* SPACING */
 .py-md-40 {
   padding: 40px 0;

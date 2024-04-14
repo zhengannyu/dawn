@@ -14,10 +14,26 @@
       ],
       "settings": {
       }
+    },
+    "custom-sec-fqas-custom": {
+      "type": "custom-sec-fqas-custom",
+      "custom_css": [
+      ],
+      "settings": {
+      }
+    },
+    "custom-sec-brands": {
+      "type": "custom-sec-brands",
+      "custom_css": [
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "custom-page-custom"
+    "custom-page-custom",
+    "custom-sec-fqas-custom",
+    "custom-sec-brands"
   ]
 }

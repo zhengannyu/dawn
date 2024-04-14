@@ -11,7 +11,13 @@
     "custom-page-bulk": {
       "type": "custom-page-bulk",
       "custom_css": [
-
+      ],
+      "settings": {
+      }
+    },
+    "custom-sec-fqas-bulk": {
+      "type": "custom-sec-fqas-bulk",
+      "custom_css": [
       ],
       "settings": {
       }
@@ -19,6 +25,7 @@
   },
   "order": [
     "main",
-    "custom-page-bulk"
+    "custom-page-bulk",
+    "custom-sec-fqas-bulk"
   ]
 }
