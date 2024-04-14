@@ -1,53 +1,116 @@
-{%- style -%} 
-
-{%- endstyle -%}
+{%- style -%}{%- endstyle -%}
 {% comment %} {% assign service_handle_url = request.path | split: "/" | last %} {% endcomment %}
 {% assign services = shop.metaobjects.services.values %}
 {% assign fqas = shop.metaobjects.fqa.values | where: "type", "custom" %}
 {% assign photos = shop.metaobjects.slider_service.values %}
 {% assign logos = shop.metaobjects.brands.values %}
 <div class="custom-index-services">
-    {% for service in services %}
-        {% if service.system.handle == "custom" %}
+  {% for service in services %}
+    {% if service.system.handle == "custom" %}
+      <div class="page-width">
+        {% render 'page-title'
+          , herotitle: service.herotitle %}
+      </div>
+      <div class="sliderimg-wrapper">
+        {% for picture in photos %}
+          <img
+            class="slide"
+            srcset="{{ picture.photo | image_url: width: 800 }}"
+            sizes="(min-width: 400px) 298px, 40vw"
+            alt=""
+            width="auto"
+            height="auto">
+        {% endfor %}
+      </div>
+      <div class="page-width">
+        <div class="service-title-block">
+          <h1 class="title display-1">{{ service.title }}</h1>
+          <p class="line-h250 text-justify">{{ service.description }}</p>
+        </div>
+      </div>
+      <div class="full-bg">
         <div class="page-width">
-            {% render 'page-title', herotitle: service.herotitle %}      
-        </div>
-        <div class="sliderimg-wrapper">
-            {% for picture in photos %}
-                <img 
-                class="slide"
-                srcset="{{ picture.photo | image_url: width: 800 }}"
-                sizes="(min-width: 400px) 298px, 40vw"
-                alt=""
-                width="auto"
-                height="100%"
-                >
-            {% endfor %}
-            </div>
-            <h1>{{ service.title }}</h1>
-            <p>{{ service.description }}</p>
-            <div class="page-width">
-                <div class="fqa">
-                    {% for fqa in fqas %}
-                        <p>{{fqa.question}}</p>
-                        <p>{{fqa.answer}}</p>
-                {% endfor %}
+          <h1 class="display-1">ODM/OEM</h1>
+          <p class="process-desp">You got a great product idea, what's next?</p>
+          <div class="flex-md-row">
+            <div class="w-md-50 process">
+              <div class="process-card">
+                <h5 class="number">01</h5>
+                {{ images['bag_2.svg'] | image_url: width: 80 | image_tag }}
+                <div class="textarea">
+                  <h4>產品方向討論</h4>
+                  <p>依照客戶產品訴求進行討論</p>
                 </div>
-                <div class="page-title">
-                    <h1 class="big-title">{{ service.subtitle.value[0] }} <span>{{ service.subtitle.value[1] }}</span></h1>
-                    <h1 class="zh-title">{{ service.subtitle.value[2] }}</h1>
-                {% for logo in logos %}
-                    <img 
-                    class="slide"
-                    srcset="{{ logo.photo | image_url: width: 800 }}"
-                    sizes="(min-width: 400px) 298px, 40vw"
-                    alt=""
-                    width="auto"
-                    height="100%"
-                    >
-                {% endfor %}
+              </div>
+              <div class="process-card">
+                <h5 class="number">02</h5>
+                {{ images['bag_2.svg'] | image_url: width: 80 | image_tag }}
+                <div class="textarea">
+                  <h4>產品設計提案</h4>
+                  <p>提案經雙方確認後進行打樣並提供樣品</p>
+                </div>
+              </div>
+              <div class="process-card">
+                <h5 class="number">03</h5>
+                {{ images['bag_2.svg'] | image_url: width: 80 | image_tag }}
+                <div class="textarea">
+                  <h4>商品打樣、樣品確認</h4>
+                  <p>提案經雙方確認後進行打樣並提供樣品</p>
+                </div>
+              </div>
             </div>
+            <div class="w-md-50 process">
+              <div class="process-card">
+                <h5 class="number">04</h5>
+                {{ images['bag_2.svg'] | image_url: width: 80 | image_tag }}
+                <div class="textarea">
+                  <h4>產品報價、訂單確認</h4>
+                  <p>依據最終確認樣以及客戶條件進行報價</p>
+                </div>
+              </div>
+              <div class="process-card">
+                <h5 class="number">05</h5>
+                {{ images['bag_2.svg'] | image_url: width: 80 | image_tag }}
+                <div class="textarea">
+                  <h4>製造生產</h4>
+                  <p>依照確認樣為標準，製造流程進行生產</p>
+                </div>
+              </div>
+              <div class="process-card six">
+                <h5 class="number">06</h5>
+                {{ images['bag_2.svg'] | image_url: width: 80 | image_tag }}
+                <div class="textarea">
+                  <h4>成品出貨</h4>
+                  <p>交付指定商品</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        {% endif %}
-    {% endfor %}
+      </div>
+      <div class="page-width">
+        <div class="fqa">
+          {% for fqa in fqas %}
+            <p>{{ fqa.question }}</p>
+            <p>{{ fqa.answer }}</p>
+          {% endfor %}
+        </div>
+        <div class="page-title">
+          <h1 class="big-title">{{ service.subtitle.value[0] }}
+            <span>{{ service.subtitle.value[1] }}</span>
+          </h1>
+          <h1 class="zh-title">{{ service.subtitle.value[2] }}</h1>
+          {% for logo in logos %}
+            <img
+              class="slide"
+              srcset="{{ logo.photo | image_url: width: 800 }}"
+              sizes="(min-width: 400px) 298px, 40vw"
+              alt=""
+              width="auto"
+              height="100%">
+          {% endfor %}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
 </div>

@@ -1,41 +1,90 @@
-{%- style -%} 
-{%- endstyle -%}
+{%- style -%}{%- endstyle -%}
 {% comment %} {% assign service_handle_url = request.path | split: "/" | last %} {% endcomment %}
 {% assign services = shop.metaobjects.services.values %}
 {% assign fqas = shop.metaobjects.fqa.values | where: "type", "bulk" %}
 {% assign photos = shop.metaobjects.slider_service.values %}
 <div class="custom-index-services">
-    {% for service in services %}
-        {% if service.system.handle == "bulk-purchase" %}
-        <div class="page-width">
-            {% render 'page-title', herotitle: service.herotitle %}      
+  {% for service in services %}
+    {% if service.system.handle == "bulk-purchase" %}
+      <div class="page-width">
+        {% render 'page-title'
+          , herotitle: service.herotitle %}
+      </div>
+      <div class="sliderimg-wrapper">
+        {% for picture in photos %}
+          <img
+            class="slide"
+            srcset="{{ picture.photo | image_url: width: 800 }}"
+            sizes="(min-width: 400px) 298px, 40vw"
+            alt=""
+            width="auto"
+            height="100%">
+        {% endfor %}
+      </div>
+      <div class="page-width">
+        <div class="service-title-block">
+          <h1 class="title display-1">{{ service.title }}</h1>
+          <p class="line-h250 text-justify">{{ service.description }}</p>
         </div>
-        <div class="sliderimg-wrapper">
-            {% for picture in photos %}
-                <img 
-                class="slide"
-                srcset="{{ picture.photo | image_url: width: 800 }}"
-                sizes="(min-width: 400px) 298px, 40vw"
-                alt=""
-                width="auto"
-                height="100%"
-                >
-            {% endfor %}
-            </div>
-            <h1>{{ service.title }}</h1>
-            <p>{{ service.description }}</p>
-            <div class="page-width">
-                <div class="fqa">
-                    {% for fqa in fqas %}
-                        <p>{{fqa.question}}</p>
-                        <p>{{fqa.answer}}</p>
-                {% endfor %}
+      </div>
+      <div class="full-bg">
+        <div class="page-width">
+          <h1 class="display-1">服務流程</h1>
+          <p class="process-desp">You got a great product idea, what's next?</p>
+          <div class="flex-md-row">
+            <div class="w-md-50 process">
+              <div class="process-card">
+                <h5 class="number">01</h5>
+                {{ images['bag_2.svg'] | image_url: width: 80 | image_tag }}
+                <div class="textarea">
+                  <h4>洽詢</h4>
+                  <p>我們會仔細傾聽閱讀您的需求</p>
                 </div>
-                <div class="page-title">
-                    <h1 class="big-title">{{ service.subtitle.value[0] }} <span>{{ service.subtitle.value[1] }}</span></h1>
-                    <h1 class="zh-title">{{ service.subtitle.value[2] }}</h1>
+              </div>
+              <div class="process-card">
+                <h5 class="number">02</h5>
+                {{ images['bag_2.svg'] | image_url: width: 80 | image_tag }}
+                <div class="textarea">
+                  <h4>討論</h4>
+                  <p>相談討論，進行最適切的合作</p>
                 </div>
+              </div>
             </div>
-        {% endif %}
-    {% endfor %}
+            <div class="w-md-50 process">
+              <div class="process-card">
+                <h5 class="number">03</h5>
+                {{ images['bag_2.svg'] | image_url: width: 80 | image_tag }}
+                <div class="textarea">
+                  <h4>產品報價、訂單確認</h4>
+                  <p>依據最終確認樣以及客戶條件進行報價、配送方式、付款方法。</p>
+                </div>
+              </div>
+              <div class="process-card six">
+                <h5 class="number">04</h5>
+                {{ images['bag_2.svg'] | image_url: width: 80 | image_tag }}
+                <div class="textarea">
+                  <h4>製造生產</h4>
+                  <p>交付指定商品</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="page-width">
+        <div class="fqa">
+          {% for fqa in fqas %}
+            <p>{{ fqa.question }}</p>
+            <p>{{ fqa.answer }}</p>
+          {% endfor %}
+        </div>
+        <div class="page-title">
+          <h1 class="big-title">{{ service.subtitle.value[0] }}
+            <span>{{ service.subtitle.value[1] }}</span>
+          </h1>
+          <h1 class="zh-title">{{ service.subtitle.value[2] }}</h1>
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
 </div>
