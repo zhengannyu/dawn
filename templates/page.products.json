@@ -17,8 +17,8 @@
       "settings": {
       }
     },
-    "custom_liquid_fewWKN": {
-      "type": "custom-liquid",
+    "custom-page-products": {
+      "type": "custom-page-products",
       "settings": {
         "custom_liquid": "",
         "color_scheme": "",
@@ -30,6 +30,6 @@
   "order": [
     "main",
     "custom-herotitle",
-    "custom_liquid_fewWKN"
+    "custom-page-products"
   ]
 }

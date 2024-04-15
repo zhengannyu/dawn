@@ -482,4 +482,9 @@
   color: #373433;
   opacity: 90%;
   text-align: justify;
+}
+
+.product-pdf {
+  min-height: 500px;
+  position: sticky;
 }/*# sourceMappingURL=costom-style.css.map */
