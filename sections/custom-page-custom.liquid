@@ -2,7 +2,6 @@
 {% comment %} {% assign service_handle_url = request.path | split: "/" | last %} {% endcomment %}
 {% assign services = shop.metaobjects.services.values %}
 {% assign photos = shop.metaobjects.slider_service.values %}
-{% assign logos = shop.metaobjects.brands.values %}
 <div class="custom-index-services">
   {% for service in services %}
     {% if service.system.handle == "custom" %}

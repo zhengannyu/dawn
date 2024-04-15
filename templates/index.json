@@ -65,7 +65,7 @@
       ],
       "custom_css": [
         ".slider-mobile-gutter {padding: 20px;}",
-        ".slideshow__media {border-radius: 50px; @media screen and (max-width: 600px) {border-radius: 20px; }}",
+        ".slideshow__media {border-radius: 50px; @media screen and (max-width: 740px) {border-radius: 20px; }}",
         ".slideshow__controls {border: none;}",
         ".slideshow__slide {height: calc((97vw - var(--grid-desktop-horizontal-spacing)) * 0.5);}"
       ],

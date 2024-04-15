@@ -11,12 +11,12 @@
 
 /* Flex */
 .flex-md-row.mb-reverse {
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 740px) {
     flex-direction: column-reverse;
   }
 }
 .mb-none {
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 740px) {
     display: none !important;
   }
 }
@@ -27,7 +27,7 @@
 .flex-md-row {
   display: flex;
   flex-flow: row;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 740px) {
     flex-flow: column;
   }
 }
@@ -44,7 +44,7 @@
 
 .w-md-50 {
   width: 50%;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 740px) {
     width: 100%;
   }
 }
@@ -52,7 +52,7 @@
 /* SPACING */
 .py-md-40 {
   padding: 40px 0;
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 740px) {
     padding: 20px 0;
   }
 }
