@@ -1,47 +1,58 @@
-    {% style  %}
-    .material-title-wrapper{
-        margin-top:120px;
-        display:flex;
-        flex-flow:row;
-
-        .title-area{
-            width:30%;
-        }
-        .title-text{
-            width:70%;
-        }
-        .big-title{
-            margin:4px 0;
-            font-size:64px;
-            font-weight:900;
-            color:#CDDE00;
-        }
-        .big-title.gray{
-            color:#373433;
-        }
-        .zh-title{
-            font-size:16px;
-            letter-spacing:5px;
-        }
+{% style %}
+  .material-title-wrapper {
+    margin-top: 120px;
+    display: flex;
+    flex-flow: row;
+    @media screen and (max-width: 600px) {
+      flex-flow: column;
     }
+    .title-area {
+      width: 30%;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+    .title-text {
+      width: 70%;
+      @media screen and (max-width: 600px) {
+        width: 100%;
+      }
+    }
+    .big-title {
+      margin: 4px 0;
+      font-size: 64px;
+      font-weight: 900;
+      color: #CDDE00;
+    }
+    .big-title.gray {
+      color: #373433;
+    }
+    .zh-title {
+      font-size: 16px;
+      letter-spacing: 5px;
+    }
+  }
 
-    {% endstyle %}
-    <div class="page-width">
-        <div class="material-title-wrapper">
-            <div class="title-area">
-                <h1 class="big-title">Our</h1>
-                <h1 class="big-title gray">Materials</h1>
-                <h1 class="zh-title">我們的材質</h1>
-            </div>
-            <div class="title-text">
-                <p>對Axon來說「耐久用」，是我們對於材質的基本要求，<br>
-                以減少浪費、降低碳足跡的環保概念，讓環保不單純是回收再製。
-                </p>
-            </div>
-        </div>
-        <div class="material-wrapper">
-            {%for data in shop.metaobjects.materials.values %}
-                {%render 'material-card', name: data.name, info: data.info, photo: data.img %}
-            {% endfor %}
-        </div>
+{% endstyle %}
+<div class="page-width">
+  <div class="material-title-wrapper">
+    <div class="title-area">
+      <h1 class="big-title">Our</h1>
+      <h1 class="big-title gray">Materials</h1>
+      <h1 class="zh-title">我們的材質</h1>
     </div>
+    <div class="title-text">
+      <p>對Axon來說「耐久用」，是我們對於材質的基本要求，<br>
+        以減少浪費、降低碳足跡的環保概念，讓環保不單純是回收再製。
+      </p>
+    </div>
+  </div>
+  <div class="material-wrapper">
+    {% for data in shop.metaobjects.materials.values %}
+      {% render 'material-card'
+        , name: data.name
+        , info: data.info
+        , photo: data.img %}
+    {% endfor %}
+  </div>
+</div>

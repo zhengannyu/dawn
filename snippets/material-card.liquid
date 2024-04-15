@@ -1,39 +1,48 @@
 {%- style -%}
-    .material-wrapper{
-        margin:0 0 0 auto;
-        width: 70%;
+  .material-wrapper {
+    margin: 0 0 0 auto;
+    width: 70%;
+    @media screen and (max-width: 600px) {
+      width: 100%;
     }
-    .material-card{
-        display: flex;
-        gap: 32px;
-        padding:32px 0;
-        align-items: end;
+  }
+  .material-card {
+    display: flex;
+    gap: 32px;
+    padding: 32px 0;
+    align-items: end;
+    @media screen and (max-width: 600px) {
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      padding: 32px;
     }
-    .material-title{
-        font-size:32px;
-        font-weight:600;
-        color: #373433;
-    }
-    .material-order{
-        font-size:18px;
-        vertical-align:super;
-    }
+  }
+  .material-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #373433;
+    line-height: 150%;
+  }
+  .material-order {
+    font-size: 18px;
+    vertical-align: super;
+  }
 {%- endstyle -%}
-    <div class="material-card">
-        <img 
-        class="slide"
-        srcset="{{ photo | image_url: width: 300 }}"
-        sizes="(min-width: 400px) 298px, 40vw"
-        alt=""
-        width="auto"
-        height="100%"
-        >
-        <div class="material-textarea">
-            <div class="material-title">
-                <span class="material-order">{{ name.value[0] }}</span>
-                <span class="zh">{{ name.value[1] }}</span>
-                <span class="en">{{ name.value[2] }}</span>
-            </div>
-            <p class="material-info">{{ info }}</p>
-        </div>
+<div class="material-card">
+  <img
+    class=""
+    srcset="{{ photo | image_url: width: 300 }}"
+    sizes="(min-width: 400px) 298px, 100vw"
+    alt=""
+    width="auto"
+    height="100%">
+  <div class="material-textarea">
+    <div class="material-title">
+      <span class="material-order">{{ name.value[0] }}</span>
+      <span class="zh">{{ name.value[1] }}</span>
+      <span class="en">{{ name.value[2] }}</span>
     </div>
+    <p class="material-info">{{ info }}</p>
+  </div>
+</div>
