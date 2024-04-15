@@ -6,7 +6,7 @@
         "template--20830202659089__23ae5ea2-ee7c-4f3d-bae6-614b1f160bf8-slide-2": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/20230615-LT15A-BLK-03.jpg",
+            "image": "shopify://shop_images/20240415-_-Banner_36ce19a3-1d9a-4656-b0dd-d337000f54fb.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -24,7 +24,7 @@
         "0f551245-9619-49e1-bd6a-bef9e38d5645": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/20230615-CBP-BLK-19.jpg",
+            "image": "shopify://shop_images/20240415-_-Banner.jpg",
             "heading": "",
             "heading_size": "h1",
             "subheading": "",
@@ -38,16 +38,36 @@
             "color_scheme": "background-1",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_KCRQKK": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/20240415-_-Banner_6c01fd6f-09e9-465c-8762-211c258bda87.jpg",
+            "heading": "",
+            "heading_size": "h1",
+            "subheading": "",
+            "button_label": "",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": false,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
         "template--20830202659089__23ae5ea2-ee7c-4f3d-bae6-614b1f160bf8-slide-2",
-        "0f551245-9619-49e1-bd6a-bef9e38d5645"
+        "0f551245-9619-49e1-bd6a-bef9e38d5645",
+        "slide_KCRQKK"
       ],
       "custom_css": [
         ".slider-mobile-gutter {padding: 20px;}",
-        ".slideshow__media {border-radius: 50px;}",
-        ".slideshow__controls {border: none;}"
+        ".slideshow__media {border-radius: 50px; @media screen and (max-width: 600px) {border-radius: 20px; }}",
+        ".slideshow__controls {border: none;}",
+        ".slideshow__slide {height: calc((97vw - var(--grid-desktop-horizontal-spacing)) * 0.5);}"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -56,7 +76,7 @@
         "auto_rotate": false,
         "change_slides_speed": 5,
         "image_behavior": "none",
-        "show_text_below": true,
+        "show_text_below": false,
         "accessibility_info": "Slideshow about our brand"
       }
     },
@@ -101,14 +121,14 @@
         "text_eFeHgE": {
           "type": "text",
           "settings": {
-            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.<\/p>"
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
           }
         },
         "button_cjKLy3": {
           "type": "button",
           "settings": {
             "button_label": "查看AXON產品型錄",
-            "button_link": "shopify:\/\/pages\/products",
+            "button_link": "shopify://pages/products",
             "button_style_secondary": false,
             "button_label_2": "",
             "button_link_2": "",
