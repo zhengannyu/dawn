@@ -5,6 +5,7 @@
     flex-flow: row;
     @media screen and (max-width: 740px) {
       flex-flow: column;
+      padding: 0 30px;
     }
     .title-area {
       width: 30%;
@@ -23,6 +24,9 @@
       font-size: 64px;
       font-weight: 900;
       color: #CDDE00;
+      @media screen and (max-width: 740px) {
+        font-size: 32px;
+      }
     }
     .big-title.gray {
       color: #373433;
@@ -48,8 +52,10 @@
     </div>
   </div>
   <div class="material-wrapper">
-    {% for data in shop.metaobjects.materials.values %}
+    {% assign datas = shop.metaobjects.materials.values | sort: 'number' %}
+    {% for data in datas %}
       {% render 'material-card'
+        , number: data.number
         , name: data.name
         , info: data.info
         , photo: data.img %}

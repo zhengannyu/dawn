@@ -9,7 +9,7 @@
   .material-card {
     display: flex;
     gap: 32px;
-    padding: 32px 0;
+    padding: 64px 0;
     align-items: end;
     @media screen and (max-width: 740px) {
       flex-flow: column;
@@ -28,10 +28,13 @@
     font-size: 18px;
     vertical-align: super;
   }
+  .material-img {
+    border-radius: 16px;
+  }
 {%- endstyle -%}
 <div class="material-card">
   <img
-    class=""
+    class="material-img"
     srcset="{{ photo | image_url: width: 300 }}"
     sizes="(min-width: 400px) 298px, 100vw"
     alt=""
@@ -39,9 +42,9 @@
     height="100%">
   <div class="material-textarea">
     <div class="material-title">
-      <span class="material-order">{{ name.value[0] }}</span>
-      <span class="zh">{{ name.value[1] }}</span>
-      <span class="en">{{ name.value[2] }}</span>
+      <span class="material-order">{{ number.value }}</span>
+      <span class="zh">{{ name.value[0] }}</span>
+      <span class="en">{{ name.value[1] }}</span>
     </div>
     <p class="material-info">{{ info }}</p>
   </div>

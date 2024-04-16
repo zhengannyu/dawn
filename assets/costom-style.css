@@ -494,4 +494,11 @@
   .product-pdf {
     min-height: 700px;
   }
+}
+
+.product__description.rte.quick-add-hidden ul > li {
+  text-indent: -1em;
+}
+.product__description.rte.quick-add-hidden ul > li::marker {
+  margin-right: 13px !important;
 }/*# sourceMappingURL=costom-style.css.map */
