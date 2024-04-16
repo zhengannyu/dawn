@@ -93,6 +93,7 @@
         "heading_6azMGc",
         "text_ExL8CE"
       ],
+      "disabled": true,
       "custom_css": [
 
       ],
@@ -131,6 +132,7 @@
         "heading_8faK9R",
         "text_V689yV"
       ],
+      "disabled": true,
       "settings": {
         "image": "{{ product.metafields.custom._product_image_1.value }}",
         "height": "adapt",
@@ -178,6 +180,7 @@
         "text_t8GQCJ",
         "button_HQWkAD"
       ],
+      "disabled": true,
       "settings": {
         "height": "adapt",
         "desktop_image_width": "medium",
@@ -195,6 +198,7 @@
     },
     "related-products": {
       "type": "related-products",
+      "disabled": true,
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",

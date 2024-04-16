@@ -68,6 +68,10 @@
   line-height: 150%;
 }
 
+.line-h100 {
+  line-height: 100%;
+}
+
 .spacing-l {
   letter-spacing: 5px;
 }
@@ -147,6 +151,10 @@
 
 .mx-auto {
   margin: 0 auto;
+}
+
+.m-0 {
+  margin: 0;
 }
 
 .test {
