@@ -11,17 +11,27 @@
     color: #FFF;
     @media screen and (max-width: 740px) {
       flex-flow: column;
+      justify-content: center;
       min-height: auto;
       padding: 20px;
       border-radius: 20px;
     }
   }
   .custom-footer-logo {
-    flex: 1.4;
+    width: 30%;
     list-style-type: none;
     padding: 0 20px;
     @media screen and (max-width: 740px) {
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      width: 100%;
       padding: 0 0 10px;
+      p {
+        color: white !important;
+        margin: 4px 0;
+        text-align: center;
+      }
     }
   }
   .custom-footer-menu {
@@ -64,6 +74,7 @@
     bottom: 20px;
     right: 50px;
     font-size: 14px;
+    color: #FFF;
     @media screen and (max-width: 740px) {
       font-size: 12px;
       margin: 20px 0 0;
@@ -73,7 +84,7 @@
     }
     a {
       padding: 0 8px;
-      color: #FFF;
+      color: inherit !important;
       text-decoration: none;
       :hover {
         color: dark(20);
@@ -98,6 +109,9 @@
     <div class="custom-footer">
       <div class="custom-footer-logo">
         {{ images['logo-white.png'] | image_url: width: 180 | image_tag }}
+        <p>台灣亞上有限公司 AXON TAIWAN INC.</p>
+        <p>403016 臺中市西區大業北路7號7樓<br/>
+          (+886) 4-2327-6999</p>
       </div>
       <ul class="custom-footer-menu mb-none">
         <li>
@@ -112,7 +126,7 @@
       </ul>
       <ul class="custom-footer-menu mb-none">
         <li>
-          <a href="https://anyu-hydrogen.myshopify.com/pages/services">Services</a>
+          <a href="https://anyu-hydrogen.myshopify.com/pages/custom">Services</a>
         </li>
         <li>
           <a href="https://anyu-hydrogen.myshopify.com/pages/contact">Contact Us</a>

@@ -141,6 +141,9 @@
         "text_eFeHgE",
         "button_cjKLy3"
       ],
+      "custom_css": [
+        ".button.button--primary{padding: 20px 40px;border-radius: 40px;}"
+      ],
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
