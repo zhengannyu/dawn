@@ -1,0 +1,44 @@
+{%- style -%}
+  .logo-wrapper {
+    display: flex;
+    flex-flow: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    @media screen and (max-width: 1080px) {
+      justify-content: center;
+      gap: 60px;
+    }
+  }
+  .logo-item {
+    max-width: 200px;
+    max-height: 200px;
+    @media screen and (max-width: 740px) {
+      max-width: 100px;
+      max-height: 100px;
+    }
+  }
+{%- endstyle -%}
+{% assign logos = shop.metaobjects.brands.values %}
+
+<div class="page-width">
+  <div class="page-title">
+    <h1 class="big-title text-center">Our<span>
+        Client</span>
+    </h1>
+    <div class="logo-wrapper">
+      {% for logo in logos %}
+        <div class="">
+          <img
+            class="logo-item"
+            srcset="{{ logo.photo | image_url: width: 800 }}"
+            sizes="max-width: 350px"
+            alt=""
+            width="100%"
+            height="auto">
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
