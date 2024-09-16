@@ -23,7 +23,7 @@
       margin: 4px 0;
       font-size: 64px;
       font-weight: 900;
-      color: #CDDE00;
+      color: #cdde00;
       @media screen and (max-width: 740px) {
         font-size: 32px;
       }
@@ -36,7 +36,6 @@
       letter-spacing: 5px;
     }
   }
-
 {% endstyle %}
 <div class="page-width">
   <div class="material-title-wrapper">
@@ -46,7 +45,8 @@
       <h1 class="zh-title">我們的材質</h1>
     </div>
     <div class="title-text">
-      <p>對Axon來說「耐久用」，是我們對於材質的基本要求，<br>
+      <p>
+        對Axon來說「耐久用」，是我們對於材質的基本要求，<br>
         以減少浪費、降低碳足跡的環保概念，讓環保不單純是回收再製。
       </p>
     </div>
@@ -54,11 +54,7 @@
   <div class="material-wrapper">
     {% assign datas = shop.metaobjects.materials.values | sort: 'number' %}
     {% for data in datas %}
-      {% render 'material-card'
-        , number: data.number
-        , name: data.name
-        , info: data.info
-        , photo: data.img %}
+      {% render 'material-card', number: data.number, name: data.name, info: data.info, img: data.photo %}
     {% endfor %}
   </div>
 </div>

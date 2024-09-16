@@ -1,7 +1,7 @@
 {
   "sections": {
-    "services-title": {
-      "type": "services-title",
+    "custom-herotitle": {
+      "type": "custom-herotitle",
       "settings": {
       }
     },
@@ -68,7 +68,7 @@
     }
   },
   "order": [
-    "services-title",
+    "custom-herotitle",
     "collapsible_content_jFJB6E"
   ]
 }
