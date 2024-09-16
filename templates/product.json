@@ -22,13 +22,11 @@
         },
         "quantity_selector": {
           "type": "quantity_selector",
-          "disabled": true,
           "settings": {
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
-          "disabled": true,
           "settings": {
             "show_dynamic_checkout": false,
             "show_gift_card_recipient": true
@@ -116,14 +114,14 @@
         "heading_8faK9R": {
           "type": "heading",
           "settings": {
-            "heading": "{{ product.metafields.custom._product_title_1.value }}",
+            "heading": "{{ product.metafields.custom.product_title_1.value }}",
             "heading_size": "h1"
           }
         },
         "text_V689yV": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "text_style": "body"
           }
         }
@@ -134,7 +132,7 @@
       ],
       "disabled": true,
       "settings": {
-        "image": "{{ product.metafields.custom._product_image_1.value }}",
+        "image": "{{ product.metafields.custom.product_image_1.value }}",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -162,7 +160,7 @@
         "text_t8GQCJ": {
           "type": "text",
           "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.</p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
             "text_style": "body"
           }
         },
