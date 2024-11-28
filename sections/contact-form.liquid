@@ -66,14 +66,16 @@
       {%- endif -%}
       <div class="contact__fields custom">
         <div class="custom-field">
-          <label class="custom-field__label" for="ContactForm-name">{{ 'templates.contact.form.company' | t }}</label>
+          <label class="custom-field__label" for="ContactForm-company">
+            {{- 'templates.contact.form.company' | t -}}
+          </label>
           <input
             class="custom-field__input"
-            autocomplete="name"
+            autocomplete="company"
             type="text"
-            id="ContactForm-name"
-            name="contact[{{ 'templates.contact.form.name' | t }}]"
-            value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+            id="ContactForm-company"
+            name="contact[{{ 'templates.contact.form.company' | t }}]"
+            value="{% if form.company %}{{ form.company }}{% elsif customer %}{{ customer.company }}{% endif %}"
             placeholder="台灣亞上"
           >
         </div>
