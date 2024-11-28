@@ -11,8 +11,7 @@
     "custom-herotitle": {
       "type": "custom-herotitle",
       "custom_css": [],
-      "settings": {
-      }
+      "settings": {}
     },
     "form": {
       "type": "contact-form",

@@ -10,17 +10,13 @@
     },
     "custom-page-bulk": {
       "type": "custom-page-bulk",
-      "custom_css": [
-      ],
-      "settings": {
-      }
+      "custom_css": [],
+      "settings": {}
     },
     "custom-sec-fqas-bulk": {
       "type": "custom-sec-fqas-bulk",
-      "custom_css": [
-      ],
-      "settings": {
-      }
+      "custom_css": [],
+      "settings": {}
     }
   },
   "order": [

@@ -2,8 +2,7 @@
   "sections": {
     "custom-herotitle": {
       "type": "custom-herotitle",
-      "settings": {
-      }
+      "settings": {}
     },
     "collapsible_content_jFJB6E": {
       "type": "collapsible-content",

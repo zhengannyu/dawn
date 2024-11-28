@@ -11,14 +11,12 @@
     "custom-herotitle": {
       "type": "custom-herotitle",
       "custom_css": [],
-      "settings": {
-      }
+      "settings": {}
     },
-   "custom-page-about": {
+    "custom-page-about": {
       "type": "custom-page-about",
       "custom_css": [],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [

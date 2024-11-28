@@ -11,8 +11,7 @@
     "custom-page-materials": {
       "type": "custom-page-materials",
       "custom_css": [],
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [

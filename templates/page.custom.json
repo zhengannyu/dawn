@@ -10,24 +10,18 @@
     },
     "custom-page-custom": {
       "type": "custom-page-custom",
-      "custom_css": [
-      ],
-      "settings": {
-      }
+      "custom_css": [],
+      "settings": {}
     },
     "custom-sec-fqas-custom": {
       "type": "custom-sec-fqas-custom",
-      "custom_css": [
-      ],
-      "settings": {
-      }
+      "custom_css": [],
+      "settings": {}
     },
     "custom-sec-brands": {
       "type": "custom-sec-brands",
-      "custom_css": [
-      ],
-      "settings": {
-      }
+      "custom_css": [],
+      "settings": {}
     }
   },
   "order": [

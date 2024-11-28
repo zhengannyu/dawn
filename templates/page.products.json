@@ -14,13 +14,11 @@
         ".big-title {color: #373433;}",
         "span {color: #cdde00;}"
       ],
-      "settings": {
-      }
+      "settings": {}
     },
     "custom-page-products": {
       "type": "custom-page-products",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [

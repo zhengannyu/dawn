@@ -80,8 +80,7 @@
     },
     "featured_collection": {
       "type": "featured-collection",
-      "custom_css": [
-      ],
+      "custom_css": [],
       "settings": {
         "title": "",
         "heading_size": "h2",
@@ -155,13 +154,11 @@
     },
     "custom-sec-about": {
       "type": "custom-sec-about",
-      "settings": {
-      }
+      "settings": {}
     },
     "custom-sec-service": {
       "type": "custom-sec-service",
-      "settings": {
-      }
+      "settings": {}
     }
   },
   "order": [

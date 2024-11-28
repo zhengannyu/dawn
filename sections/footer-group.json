@@ -14,9 +14,7 @@
     "footer": {
       "type": "footer",
       "disabled": true,
-      "custom_css": [
-
-      ],
+      "custom_css": [],
       "settings": {
         "color_scheme": "inverse",
         "newsletter_enable": false,
