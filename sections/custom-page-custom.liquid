@@ -12,7 +12,7 @@
         {% for photo in photos %}
           <img
             class="slide"
-            srcset="{{ photo.photo | image_url: width: 800 }}"
+            srcset="{{ photo.photo | image_url: width: 600 }}"
             sizes="(min-width: 400px) 298px, 40vw"
             alt=""
             width="auto"
@@ -31,55 +31,55 @@
           <h1 class="display-1">ODM/OEM</h1>
           <p class="process-desp">You got a great product idea, what's next?</p>
           <div class="flex-md-row">
-            <div class="w-md-50 process">
+            <div class="w-md-50 process-left">
               <div class="process-card">
                 <h5 class="number">01</h5>
-                {{ images['message-multiple-01.svg'] | image_url: width: 80 | image_tag }}
+                {{ images['message.svg'] | image_url: width: 60 | image_tag }}
                 <div class="textarea">
                   <h4>產品方向討論</h4>
-                  <p>依照客戶產品訴求進行討論</p>
+                  <p>根據您的產品需求與市場定位，深入探討並確認開發方向。</p>
                 </div>
               </div>
               <div class="process-card">
                 <h5 class="number">02</h5>
-                {{ images['dashboard-circle-edit.svg'] | image_url: width: 80 | image_tag }}
+                {{ images['design.svg'] | image_url: width: 60 | image_tag }}
                 <div class="textarea">
                   <h4>產品設計提案</h4>
-                  <p>提案經雙方確認後進行打樣並提供樣品</p>
+                  <p>設計專屬提案，雙方確認後進行打樣，並提供樣品供審核。</p>
                 </div>
               </div>
               <div class="process-card">
                 <h5 class="number">03</h5>
-                {{ images['3-d-view.svg'] | image_url: width: 80 | image_tag }}
+                {{ images['sample.svg'] | image_url: width: 60 | image_tag }}
                 <div class="textarea">
-                  <h4>商品打樣、樣品確認</h4>
-                  <p>提案經雙方確認後進行打樣並提供樣品</p>
+                  <h4>商品打樣</h4>
+                  <p>根據確認的設計方案，精細打樣，確保產品符合預期與標準。</p>
                 </div>
               </div>
             </div>
-            <div class="w-md-50 process">
+            <div class="w-md-50 process-right">
               <div class="process-card">
                 <h5 class="number">04</h5>
-                {{ images['agreement-03.svg'] | image_url: width: 80 | image_tag }}
+                {{ images['agreement.svg'] | image_url: width: 60 | image_tag }}
                 <div class="textarea">
-                  <h4>產品報價、訂單確認</h4>
-                  <p>依據最終確認樣以及客戶條件進行報價</p>
+                  <h4>產品報價</h4>
+                  <p>以最終確認的樣品為基準，提供詳細報價與合作條件。</p>
                 </div>
               </div>
               <div class="process-card">
                 <h5 class="number">05</h5>
-                {{ images['archive-02.svg'] | image_url: width: 80 | image_tag }}
+                {{ images['production.svg'] | image_url: width: 60 | image_tag }}
                 <div class="textarea">
                   <h4>製造生產</h4>
-                  <p>依照確認樣為標準，製造流程進行生產</p>
+                  <p>依據確認樣品展開規模化生產，嚴格遵循質量管控流程。</p>
                 </div>
               </div>
-              <div class="process-card six">
+              <div class="process-card last">
                 <h5 class="number">06</h5>
-                {{ images['container-truck-01.svg'] | image_url: width: 80 | image_tag }}
+                {{ images['truck.svg'] | image_url: width: 60 | image_tag }}
                 <div class="textarea">
                   <h4>成品出貨</h4>
-                  <p>交付指定商品</p>
+                  <p>按時完成生產，確保產品準時交付至您指定的地點。</p>
                 </div>
               </div>
             </div>

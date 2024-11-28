@@ -12,7 +12,7 @@
         {% for picture in photos %}
           <img
             class="slide"
-            srcset="{{ picture.photo | image_url: width: 800 }}"
+            srcset="{{ picture.photo | image_url: width: 600 }}"
             sizes="(min-width: 400px) 298px, 40vw"
             alt=""
             width="auto"
@@ -31,39 +31,39 @@
           <h1 class="display-1">服務流程</h1>
           <p class="process-desp">You got a great product idea, what's next?</p>
           <div class="flex-md-row">
-            <div class="w-md-50 process">
+            <div class="w-md-50 process-left">
               <div class="process-card">
                 <h5 class="number">01</h5>
-                {{ images['ai-idea.svg'] | image_url: width: 80 | image_tag }}
+                {{ images['idea.svg'] | image_url: width: 60 | image_tag }}
                 <div class="textarea">
                   <h4>洽詢</h4>
-                  <p>我們會仔細傾聽閱讀您的需求</p>
+                  <p>我們傾聽您的需求，並深入了解您的專案目標，確保提供最佳解決方案。</p>
                 </div>
               </div>
               <div class="process-card">
                 <h5 class="number">02</h5>
-                {{ images['message-multiple-01.svg'] | image_url: width: 80 | image_tag }}
+                {{ images['message.svg'] | image_url: width: 60 | image_tag }}
                 <div class="textarea">
                   <h4>討論</h4>
-                  <p>相談討論，進行最適切的合作</p>
+                  <p>與您密切溝通，共同討論合作細節，為您的專案量身打造最適合的策略。</p>
                 </div>
               </div>
             </div>
-            <div class="w-md-50 process">
+            <div class="w-md-50 process-right">
               <div class="process-card">
                 <h5 class="number">03</h5>
-                {{ images['agreement-03.svg'] | image_url: width: 80 | image_tag }}
+                {{ images['agreement.svg'] | image_url: width: 60 | image_tag }}
                 <div class="textarea">
-                  <h4>產品報價、訂單確認</h4>
-                  <p>依據最終確認樣以及客戶條件進行報價、配送方式、付款方法。</p>
+                  <h4>產品報價</h4>
+                  <p>根據確認的樣品與您的需求，提供產品報價，同時討論配送方式與付款選項。</p>
                 </div>
               </div>
-              <div class="process-card six">
+              <div class="process-card last">
                 <h5 class="number">04</h5>
-                {{ images['archive-02.svg'] | image_url: width: 80 | image_tag }}
+                {{ images['production.svg'] | image_url: width: 60 | image_tag }}
                 <div class="textarea">
-                  <h4>製造生產</h4>
-                  <p>交付指定商品</p>
+                  <h4>製造與交付</h4>
+                  <p>開始生產並嚴格控管品質，準時交付符合您期望的商品。</p>
                 </div>
               </div>
             </div>
