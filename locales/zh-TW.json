@@ -251,7 +251,7 @@
         "phone": "電話號碼",
         "comment": "留言",
         "send": "送出",
-        "post_success": "感謝您聯絡我們。我們會盡快回覆您。",
+        "post_success": "已收到您的回應，我們會盡快回覆您。",
         "error_heading": "請調整以下內容：",
         "title": "聯絡表單"
       }

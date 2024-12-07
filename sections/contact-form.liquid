@@ -44,10 +44,10 @@
     -%}
     {%- form 'contact', id: 'ContactForm', class: contact_form_class -%}
       {%- if form.posted_successfully? -%}
-        <h2 class="form-status form-status-list form__message" tabindex="-1" autofocus>
-          {% render 'icon-success' %}
+        {{ images['feedback-soon.png'] | image_url: width: 400 | image_tag: class: 'successful-icon' }}
+        <h1 class="form-status form-status-list form__message successful-title" tabindex="-1" autofocus>
           {{ 'templates.contact.form.post_success' | t }}
-        </h2>
+        </h1>
       {%- elsif form.errors -%}
         <div class="form__message">
           <h2 class="form-status caption-large text-body" role="alert" tabindex="-1" autofocus>
@@ -64,99 +64,107 @@
           </li>
         </ul>
       {%- endif -%}
-      <div class="contact__fields custom">
-        <div class="custom-field">
-          <label class="custom-field__label" for="ContactForm-company">
-            {{- 'templates.contact.form.company' | t -}}
-          </label>
-          <input
-            class="custom-field__input"
-            autocomplete="company"
-            type="text"
-            id="ContactForm-company"
-            name="contact[{{ 'templates.contact.form.company' | t }}]"
-            value="{% if form.company %}{{ form.company }}{% elsif customer %}{{ customer.company }}{% endif %}"
-            placeholder="台灣亞上"
-          >
-        </div>
-        <div class="custom-field">
-          <label class="custom-field__label" for="ContactForm-name">{{ 'templates.contact.form.name' | t }}</label>
-          <input
-            class="custom-field__input"
-            autocomplete="name"
-            type="text"
-            id="ContactForm-name"
-            name="contact[{{ 'templates.contact.form.name' | t }}]"
-            value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
-            placeholder="Sirius Chen"
-          >
-        </div>
-        <div class="custom-field field--with-error">
-          <label class="custom-field__label" for="ContactForm-email">
-            {{- 'templates.contact.form.email' | t }}
-            <span aria-hidden="true">*</span></label
-          >
-          <input
-            autocomplete="email"
-            type="email"
-            id="ContactForm-email"
-            class="custom-field__input"
-            name="contact[email]"
-            spellcheck="false"
-            autocapitalize="off"
-            value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
-            aria-required="true"
-            {% if form.errors contains 'email' %}
-              aria-invalid="true"
-              aria-describedby="ContactForm-email-error"
-            {% endif %}
-            placeholder="xxx@axon.com.tw"
-          >
+      {%- unless form.posted_successfully? -%}
+        <div class="contact__fields custom">
+          <div class="custom-field">
+            <label class="custom-field__label" for="ContactForm-company">
+              {{- 'templates.contact.form.company' | t -}}
+            </label>
+            <input
+              class="custom-field__input"
+              autocomplete="company"
+              type="text"
+              id="ContactForm-company"
+              name="contact[{{ 'templates.contact.form.company' | t }}]"
+              value="{% if form.company %}{{ form.company }}{% elsif customer %}{{ customer.company }}{% endif %}"
+              placeholder="台灣亞上"
+            >
+          </div>
+          <div class="custom-field">
+            <label class="custom-field__label" for="ContactForm-name">
+              {{- 'templates.contact.form.name' | t }}
+              <span aria-hidden="true">*</span></label
+            >
+            <input
+              class="custom-field__input"
+              autocomplete="name"
+              type="text"
+              id="ContactForm-name"
+              name="contact[{{ 'templates.contact.form.name' | t }}]"
+              value="{% if form.name %}{{ form.name }}{% elsif customer %}{{ customer.name }}{% endif %}"
+              placeholder="Sirius Chen"
+            >
+          </div>
+          <div class="custom-field field--with-error">
+            <label class="custom-field__label" for="ContactForm-email">
+              {{- 'templates.contact.form.email' | t }}
+              <span aria-hidden="true">*</span></label
+            >
+            <input
+              autocomplete="email"
+              type="email"
+              id="ContactForm-email"
+              class="custom-field__input"
+              name="contact[email]"
+              spellcheck="false"
+              autocapitalize="off"
+              value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}"
+              aria-required="true"
+              {% if form.errors contains 'email' %}
+                aria-invalid="true"
+                aria-describedby="ContactForm-email-error"
+              {% endif %}
+              placeholder="xxx@axon.com.tw"
+            >
 
-          {%- if form.errors contains 'email' -%}
-            <small class="contact__field-error" id="ContactForm-email-error">
-              <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
-              <span class="form__message">
-                {%- render 'icon-error' -%}
-                {{- form.errors.translated_fields.email | capitalize }}
-                {{ form.errors.messages.email -}}
-              </span>
-            </small>
-          {%- endif -%}
-        </div>
-        <div class="custom-field">
-          <label class="custom-field__label" for="ContactForm-phone">{{ 'templates.contact.form.phone' | t }}</label>
-          <input
-            type="tel"
-            id="ContactForm-phone"
-            class="custom-field__input"
-            autocomplete="tel"
-            name="contact[{{ 'templates.contact.form.phone' | t }}]"
-            pattern="[0-9\-]*"
-            value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
-            placeholder="0912-345-678"
-          >
-        </div>
-        <div class="custom-field text-area">
-          <label class="custom-field__label" for="ContactForm-body">
-            {{- 'templates.contact.form.comment' | t -}}
-          </label>
-          <textarea
-            rows="10"
-            id="ContactForm-body"
-            class="text-area custom-field__input"
-            name="contact[{{ 'templates.contact.form.comment' | t }}]"
-            placeholder="留下您想詢問的問題"
-          >
+            {%- if form.errors contains 'email' -%}
+              <small class="contact__field-error" id="ContactForm-email-error">
+                <span class="visually-hidden">{{ 'accessibility.error' | t }}</span>
+                <span class="form__message">
+                  {%- render 'icon-error' -%}
+                  {{- form.errors.translated_fields.email | capitalize }}
+                  {{ form.errors.messages.email -}}
+                </span>
+              </small>
+            {%- endif -%}
+          </div>
+          <div class="custom-field">
+            <label class="custom-field__label" for="ContactForm-phone">
+              {{- 'templates.contact.form.phone' | t }}
+              <span aria-hidden="true">*</span></label
+            >
+            <input
+              type="tel"
+              id="ContactForm-phone"
+              class="custom-field__input"
+              autocomplete="tel"
+              name="contact[{{ 'templates.contact.form.phone' | t }}]"
+              pattern="[0-9\-]*"
+              value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}"
+              placeholder="0912-345-678"
+            >
+          </div>
+          <div class="custom-field text-area">
+            <label class="custom-field__label" for="ContactForm-body">
+              {{- 'templates.contact.form.comment' | t -}}
+            </label>
+            <textarea
+              rows="10"
+              id="ContactForm-body"
+              class="text-area custom-field__input"
+              name="contact[{{ 'templates.contact.form.comment' | t }}]"
+              placeholder="留下您想詢問的問題"
+            >
             {{- form.body -}}
           </textarea>
+          </div>
         </div>
-      </div>
-      <div class="contact__button">
-        <button type="submit" class="button">
-          {{ 'templates.contact.form.send' | t }}
-        </button>
-      </div>
+        <div class="contact__button">
+          <button type="submit" class="button">
+            {{ 'templates.contact.form.send' | t }}
+          </button>
+        </div>
+      {%- endunless -%}
     {%- endform -%}
   </div>
 </div>
