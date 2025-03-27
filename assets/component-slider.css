@@ -353,35 +353,50 @@ slider-component.slider-component-full-width {
 .slider-button {
   color: rgba(var(--color-foreground), 0.75);
   background: #cdde00;
-  border: none;
   cursor: pointer;
-  width: 60px;
-  height: 60px;
+  width: 66px;
+  height: 66px;
   border-radius: 50%;
+  border: 8px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute ;
   top: -200% ;
-  z-index: 2;
 }
 
-.btn-test::before{
+.slider-button::before{
     content: "";
     display: inline-block;
+    width: 33px;
+    height: 66px;
     position: absolute;
-    right:0;
-    z-index: -1;
-    width: 70px;
-    height: 130px;
-    background-image: url('https://cdn.shopify.com/s/files/1/0872/5420/4701/files/banner-button-bg.png?v=1743044167');
+    right:-8px;
+    top:-40px;
+    background-image: url('https://cdn.shopify.com/s/files/1/0872/5420/4701/files/banner-button-bg.png?v=1743069159');
     background-size: contain;
     background-repeat: no-repeat;
 }
+.slider-button::after{
+  content: "";
+  display: inline-block;
+  width: 33px;
+  height: 66px;
+  position: absolute;
+  right:-8px;
+  bottom:-40px;
+  background-image: url('https://cdn.shopify.com/s/files/1/0872/5420/4701/files/banner-button-bg.png?v=1743069159');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
 .slider-button.slider-button--prev::before{
   transform: rotate(180deg);
-  left:0;
+  left:-8px;
   right:auto;
+}
+.slider-button.slider-button--prev::after{
+  transform: rotate(180deg);
+  left:-8px;
 }
 .slider-button:not([disabled]):hover {
   color: rgb(var(--color-foreground));

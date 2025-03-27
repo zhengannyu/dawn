@@ -287,9 +287,10 @@
   left: 30px;
   background-color: #cdde00;
 }
-.btn-green img {
-  width: 22px;
-  transform: rotate(0.93turn);
+.btn-green .icon {
+  width: 32px;
+  transform: rotate(-135deg);
+  color: #333;
 }
 
 .btn-gray {
@@ -305,9 +306,10 @@
   left: 30px;
   background-color: #373433;
 }
-.btn-gray img {
-  width: 22px;
-  transform: rotate(0.93turn);
+.btn-gray .icon {
+  width: 32px;
+  transform: rotate(-135deg);
+  color: #FFF;
 }
 
 .sliderimg-wrapper {

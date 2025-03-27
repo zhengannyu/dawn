@@ -94,9 +94,10 @@
   top: 30px;
   left: 30px;
   background-color: #cdde00;
-  img {
-    width: 22px;
-    transform: rotate(0.93turn);
+  .icon {
+    width: 32px;
+    transform: rotate(-135deg);
+    color:#333;
   }
 }
 .btn-gray {
@@ -111,9 +112,10 @@
   top: 30px;
   left: 30px;
   background-color: #373433;
-  img {
-    width: 22px;
-    transform: rotate(0.93turn);
+  .icon {
+    width: 32px;
+    transform: rotate(-135deg);
+    color:#FFF;
   }
 }
 .sliderimg-wrapper {
