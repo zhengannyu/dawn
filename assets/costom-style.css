@@ -309,7 +309,7 @@
 .btn-gray .icon {
   width: 32px;
   transform: rotate(-135deg);
-  color: #FFF;
+  color: #fff;
 }
 
 .sliderimg-wrapper {
@@ -701,14 +701,6 @@
   border: none !important;
 }
 
-.slider-button--next {
-  right: 0%;
-}
-
 .slider-counter {
   width: 100%;
-}
-
-.slider-button .icon {
-  height: 24px !important;
 }/*# sourceMappingURL=costom-style.css.map */

@@ -97,7 +97,7 @@
   .icon {
     width: 32px;
     transform: rotate(-135deg);
-    color:#333;
+    color: #333;
   }
 }
 .btn-gray {
@@ -115,7 +115,7 @@
   .icon {
     width: 32px;
     transform: rotate(-135deg);
-    color:#FFF;
+    color: #fff;
   }
 }
 .sliderimg-wrapper {
@@ -455,14 +455,6 @@
 }
 
 
-.slider-button--next {
-  right: 0%;
-}
 .slider-counter {
   width: 100%;
-}
-.slider-button {
-  .icon {
-    height: 24px !important;
-  }
 }

@@ -363,8 +363,17 @@ slider-component.slider-component-full-width {
   justify-content: center;
   position: absolute ;
   top: -200% ;
+  @media screen and (max-width: 740px) {
+    transform: scale(0.8);
+    top:-100%;
+  }
 }
-
+.slider-button--next {
+  right: 0%;
+  @media screen and (max-width: 740px) {
+    right: -7px;
+  }
+}
 .slider-button::before{
     content: "";
     display: inline-block;
@@ -398,12 +407,13 @@ slider-component.slider-component-full-width {
   transform: rotate(180deg);
   left:-8px;
 }
+
 .slider-button:not([disabled]):hover {
   color: rgb(var(--color-foreground));
 }
 
 .slider-button .icon {
-  height: 0.6rem;
+  height: 24px;
 }
 
 .slider-button[disabled] .icon {
