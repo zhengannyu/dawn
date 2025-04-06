@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* FONT */
 .display-1 {
   font-size: 64px;
@@ -703,4 +704,16 @@
 
 .slider-counter {
   width: 100%;
+}
+
+/* 讓 dropdown 能對齊 summary 的左邊 */
+.mega-menu {
+  position: relative !important;
+}
+
+.mega-menu__content {
+  left: 0 !important;
+  right: inherit !important;
+  white-space: nowrap !important;
+  padding-top: 3.5rem !important;
 }/*# sourceMappingURL=costom-style.css.map */
