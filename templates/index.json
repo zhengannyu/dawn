@@ -1,7 +1,7 @@
 {
   "sections": {
-    "23ae5ea2-ee7c-4f3d-bae6-614b1f160bf8": {
-      "type": "slideshow",
+    "bannerslider": {
+      "type": "bannerslider",
       "blocks": {
         "template--20830202659089__23ae5ea2-ee7c-4f3d-bae6-614b1f160bf8-slide-2": {
           "type": "slide",
@@ -159,7 +159,7 @@
     }
   },
   "order": [
-    "23ae5ea2-ee7c-4f3d-bae6-614b1f160bf8",
+    "bannerslider",
     "featured_collection",
     "rich_text_wCpw6j",
     "custom-sec-about",

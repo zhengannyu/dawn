@@ -662,48 +662,145 @@
   display: block;
 }
 
-.slider-mobile-gutter {
-  padding: 20px !important;
-}
-
-.slideshow {
-  border-radius: 50px !important;
+/* INDEX SLIDER */
+.index.slider-mobile-gutter {
+  padding: 20px;
 }
 @media screen and (max-width: 740px) {
-  .slideshow {
-    border-radius: 20px !important;
+  .index.slider-mobile-gutter {
+    padding: 10px;
   }
 }
 
-.slideshow__controls {
-  width: calc(100% - 40px) !important;
-  border: none !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  position: absolute !important;
-  bottom: 0% !important;
-  padding-bottom: 40px !important;
+.index.slideshow.banner {
+  border-radius: 50px;
+}
+@media screen and (max-width: 740px) {
+  .index.slideshow.banner {
+    border-radius: 20px;
+  }
 }
 
-.slideshow__slide {
+.index.slideshow__controls {
+  width: calc(100% - 40px);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 0%;
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 740px) {
+  .index.slideshow__controls {
+    width: calc(100% - 20px);
+    padding-bottom: 10px;
+  }
+}
+
+.index.slideshow__slide {
   height: calc((97vw - var(--grid-desktop-horizontal-spacing)) * 0.5) !important;
 }
 
-.slider-counter__link--active .dot {
+/* SLIDER COUNTER */
+.index.slider-counter {
+  width: 100%;
+}
+
+.index.slider-counter__link--dots .dot {
+  width: 120px;
+  height: 6px;
+  border-radius: 6px;
+  background-color: rgba(255, 255, 255, 0.2509803922);
+  border: none;
+}
+@media screen and (max-width: 740px) {
+  .index.slider-counter__link--dots .dot {
+    width: 60px;
+  }
+}
+
+.index.slider-counter__link--active .dot {
   background-color: #cdde00 !important;
 }
 
-.slider-counter__link--dots .dot {
-  width: 120px !important;
-  height: 6px !important;
-  border-radius: 6px !important;
-  background-color: rgba(255, 255, 255, 0.2509803922);
-  border: none !important;
+/* SLIDER 左右按鈕 */
+.index.slideshow__controls .slider-button {
+  flex-shrink: 0;
+  color: rgba(var(--color-foreground), 0.75);
+  background: #cdde00;
+  cursor: pointer;
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+  border: 8px solid white;
+  position: absolute;
+  top: -100%;
 }
-
-.slider-counter {
-  width: 100%;
+@media screen and (max-width: 740px) {
+  .index.slideshow__controls .slider-button {
+    width: 30px;
+    height: 30px;
+    border: 4px solid white;
+    top: -200%;
+  }
+}
+.index.slideshow__controls .slider-button .icon {
+  height: 2.5rem;
+}
+.index.slideshow__controls .slider-button--next {
+  right: 0;
+}
+.index.slideshow__controls .slider-button::before {
+  content: "";
+  display: inline-block;
+  width: 33px;
+  height: 66px;
+  position: absolute;
+  right: -8px;
+  top: -40px;
+  background-image: url("https://cdn.shopify.com/s/files/1/0872/5420/4701/files/banner-button-bg.png?v=1743069159");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 740px) {
+  .index.slideshow__controls .slider-button::before {
+    right: -11px;
+    top: -37px;
+    transform: scale(0.6);
+  }
+}
+.index.slideshow__controls .slider-button::after {
+  content: "";
+  display: inline-block;
+  width: 33px;
+  height: 66px;
+  position: absolute;
+  right: -8px;
+  bottom: -40px;
+  background-image: url("https://cdn.shopify.com/s/files/1/0872/5420/4701/files/banner-button-bg.png?v=1743069159");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 740px) {
+  .index.slideshow__controls .slider-button::after {
+    right: -11px;
+    bottom: -37px;
+    transform: scale(0.6);
+  }
+}
+.index.slideshow__controls .slider-button.slider-button--prev::before,
+.index.slideshow__controls .slider-button.slider-button--prev::after {
+  transform: rotate(180deg);
+  left: -8px;
+  right: auto;
+}
+@media screen and (max-width: 740px) {
+  .index.slideshow__controls .slider-button.slider-button--prev::before,
+  .index.slideshow__controls .slider-button.slider-button--prev::after {
+    left: -11px;
+    transform: rotate(180deg) scale(0.6);
+  }
 }
 
 /* 讓 dropdown 能對齊 summary 的左邊 */
