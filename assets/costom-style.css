@@ -511,6 +511,7 @@
 @media screen and (max-width: 940px) {
   .service-title-block {
     width: 100%;
+    padding: 20px;
   }
 }
 
@@ -529,7 +530,7 @@
 @media screen and (max-width: 940px) {
   .fqa-title {
     width: 100%;
-    padding: 0 80px;
+    padding: 20px;
   }
 }
 
@@ -593,6 +594,11 @@
 .contact__fields.custom {
   display: block;
   padding: 140px 0 0 0;
+}
+@media screen and (max-width: 576px) {
+  .contact__fields.custom {
+    padding: 80px 0 0 0;
+  }
 }
 
 .custom-field {
@@ -735,7 +741,7 @@
   border-radius: 50%;
   border: 8px solid white;
   position: absolute;
-  top: -100%;
+  top: -200%;
 }
 @media screen and (max-width: 740px) {
   .index.slideshow__controls .slider-button {

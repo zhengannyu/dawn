@@ -16,6 +16,7 @@
       justify-content: center;
       align-items: center;
       padding: 32px;
+      gap: 16px;
     }
   }
   .material-title {
@@ -30,6 +31,11 @@
   }
   .material-img {
     border-radius: 16px;
+    @media screen and (max-width: 940px) {
+      width: 100%;
+      height: auto;
+      border-radius: 24px;
+    }
   }
 {%- endstyle -%}
 <div class="material-card">
