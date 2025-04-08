@@ -352,6 +352,19 @@
   border-top: 0px;
   border-radius: 0 0 40px 40px;
 }
+@media screen and (max-width: 940px) {
+  .w-md-50.process-left {
+    border-bottom: 0;
+    border-right: 0;
+    border-radius: 0;
+  }
+}
+@media screen and (max-width: 570px) {
+  .w-md-50.process-left {
+    margin: 0 0px 0 20px;
+    border-radius: 0;
+  }
+}
 .w-md-50.process-left::before {
   content: "";
   width: 4px;
@@ -385,18 +398,15 @@
     display: none;
   }
 }
-@media screen and (max-width: 940px) {
-  .w-md-50.process-left {
-    border-left: 4px solid #fff;
-    border-right: 0;
-    border-bottom: 0;
-    border-radius: 0;
-  }
-}
 
 .w-md-50.process-right {
   margin: 0 0 0 40px;
   align-self: baseline;
+}
+@media screen and (max-width: 570px) {
+  .w-md-50.process-right {
+    margin: 0 0px 0 20px;
+  }
 }
 .w-md-50.process-right .process-card::after {
   content: "";
@@ -412,6 +422,7 @@
 .process-card {
   position: relative;
   display: flex;
+  align-items: flex-start;
   padding: 0 0 200px 60px;
   -moz-column-gap: 20px;
        column-gap: 20px;
@@ -419,16 +430,26 @@
 }
 @media screen and (max-width: 940px) {
   .process-card {
+    width: calc(100% + 50px);
     padding: 0 0 120px 60px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .process-card {
+    width: calc(100% + 50px);
+    padding: 0 0 120px 60px;
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+  }
+  .process-card img {
+    width: 44px;
+    height: 44px;
   }
 }
 .process-card .number {
   flex-shrink: 0;
   margin: 0;
-  width: 70px;
-  height: 70px;
-  line-height: 70px;
-  text-align: center;
+  padding: 16px;
   background-color: #fff;
   font-size: 24px;
   font-weight: 800;
@@ -436,33 +457,36 @@
   position: relative;
   z-index: 1;
 }
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 570px) {
   .process-card .number {
-    width: 55px;
-    height: 55px;
-    line-height: 55px;
+    padding: 8px;
+    font-size: 20px;
   }
 }
 .process-card .number::after {
   content: "STEP";
-  padding: 6px 10px;
+  padding: 8px 16px;
   background-color: #fff;
   display: inline-block;
-  width: 62px;
-  height: 40px;
   position: absolute;
   border-radius: 8px;
   top: -20px;
   left: -20px;
   z-index: 2;
   font-size: 16px;
+  line-height: 16px;
   font-weight: 400;
-  line-height: 32px;
 }
 @media screen and (max-width: 940px) {
   .process-card .number::after {
-    padding: 2px 10px;
-    transform: scale(0.8);
+    padding: 6px 12px;
+  }
+}
+@media screen and (max-width: 570px) {
+  .process-card .number::after {
+    left: -16px;
+    top: -16px;
+    font-size: 12px;
   }
 }
 .process-card .textarea {
@@ -530,7 +554,7 @@
 @media screen and (max-width: 940px) {
   .fqa-title {
     width: 100%;
-    padding: 20px;
+    padding: 40px;
   }
 }
 
@@ -773,7 +797,6 @@
   .index.slideshow__controls .slider-button::before {
     right: -11px;
     top: -37px;
-    transform: scale(0.6);
   }
 }
 .index.slideshow__controls .slider-button::after {
@@ -792,7 +815,6 @@
   .index.slideshow__controls .slider-button::after {
     right: -11px;
     bottom: -37px;
-    transform: scale(0.6);
   }
 }
 .index.slideshow__controls .slider-button.slider-button--prev::before,
