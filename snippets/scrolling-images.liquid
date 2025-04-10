@@ -1,0 +1,52 @@
+<div class="scrolling-container" id="scrolling-container">
+  <div class="scrolling-track">
+    {% for i in (1..2) %}
+      {# 複製兩份圖片做無限滾動 #}
+      <div class="scrolling-group">
+        {% assign images = section.settings.image_list %}
+        {% for image in images %}
+          <div class="scrolling-item">
+            <img src="{{ image | img_url: '800x' }}" alt="About Image">
+          </div>
+        {% endfor %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+  .scrolling-container {
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+  .scrolling-track {
+    display: flex;
+    animation: scroll-left 20s linear infinite;
+  }
+  .scrolling-group {
+    display: flex;
+  }
+  .scrolling-item {
+    flex: 0 0 auto;
+    width: 250px;
+    margin-right: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .scrolling-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    } /* 根據圖片數量可調整 */
+  }
+</style>
